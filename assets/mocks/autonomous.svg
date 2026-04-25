@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-label="自律AIエージェント基盤">
+  <defs>
+    <marker id="au_arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b56c9"/>
+    </marker>
+    <linearGradient id="au_bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f5f8fd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 左: タスクスケジューラ -->
+  <g transform="translate(14,16)">
+    <rect x="0" y="0" width="92" height="148" rx="8" fill="#0b1f3d"/>
+    <text x="46" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#ffffff">Win Scheduler</text>
+    <line x1="6" y1="20" x2="86" y2="20" stroke="rgba(255,255,255,0.18)" stroke-width="0.7"/>
+
+    <!-- スケジュール行（時間帯分散の可視化） -->
+    <g font-family="system-ui, sans-serif" font-size="6.5" font-weight="600">
+      <g transform="translate(6,28)">
+        <rect width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="0" y="0" width="3" height="14" rx="1.5" fill="#5fe0a5"/>
+        <text x="8" y="9" fill="#b8d1f6">02:30</text>
+        <text x="34" y="9" fill="rgba(255,255,255,0.7)">flea-market</text>
+      </g>
+      <g transform="translate(6,46)">
+        <rect width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="0" y="0" width="3" height="14" rx="1.5" fill="#5fe0a5"/>
+        <text x="8" y="9" fill="#b8d1f6">03:00</text>
+        <text x="34" y="9" fill="rgba(255,255,255,0.7)">diary</text>
+      </g>
+      <g transform="translate(6,64)">
+        <rect width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="0" y="0" width="3" height="14" rx="1.5" fill="#5fe0a5"/>
+        <text x="8" y="9" fill="#b8d1f6">04:00</text>
+        <text x="34" y="9" fill="rgba(255,255,255,0.7)">recording</text>
+      </g>
+      <g transform="translate(6,82)">
+        <rect width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="0" y="0" width="3" height="14" rx="1.5" fill="#fbbf24"/>
+        <text x="8" y="9" fill="#b8d1f6">04:30</text>
+        <text x="34" y="9" fill="rgba(255,255,255,0.7)">job-search</text>
+      </g>
+      <g transform="translate(6,100)">
+        <rect width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="0" y="0" width="3" height="14" rx="1.5" fill="#5fe0a5"/>
+        <text x="8" y="9" fill="#b8d1f6">05:00</text>
+        <text x="34" y="9" fill="rgba(255,255,255,0.7)">x-like</text>
+      </g>
+    </g>
+
+    <line x1="6" y1="120" x2="86" y2="120" stroke="rgba(255,255,255,0.10)" stroke-width="0.7"/>
+    <text x="46" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6.5" fill="rgba(255,255,255,0.6)">時間帯分散</text>
+    <text x="46" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#5fe0a5">24/7 稼働</text>
+  </g>
+
+  <!-- 中央: 矢印 -->
+  <g transform="translate(112,86)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#0b56c9" stroke-width="1.5" marker-end="url(#au_arr)"/>
+    <text x="10" y="-6" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">起動</text>
+  </g>
+
+  <!-- 右: Claude Code セッション -->
+  <g transform="translate(140,16)">
+    <rect x="0" y="0" width="166" height="148" rx="8" fill="url(#au_bg)" stroke="#c7d4ec" stroke-width="1"/>
+    <rect x="0" y="0" width="166" height="20" rx="8" fill="#0b56c9"/>
+    <rect x="0" y="12" width="166" height="8" fill="#0b56c9"/>
+    <text x="10" y="14" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Claude Code session</text>
+    <circle cx="158" cy="11" r="3" fill="#5fe0a5">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 5 プロジェクト本番運用 -->
+    <g font-family="system-ui, sans-serif" font-size="7">
+      <g transform="translate(8,30)">
+        <rect width="6" height="6" rx="1" fill="#0b56c9"/>
+        <path d="M1,3 L2.5,4.5 L5,1.5" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="11" y="6" font-weight="600" fill="#1a2238">フリマ対応</text>
+        <text x="120" y="6" font-weight="700" fill="#5fe0a5">本番</text>
+      </g>
+      <g transform="translate(8,44)">
+        <rect width="6" height="6" rx="1" fill="#0b56c9"/>
+        <path d="M1,3 L2.5,4.5 L5,1.5" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="11" y="6" font-weight="600" fill="#1a2238">日記自動記録</text>
+        <text x="120" y="6" font-weight="700" fill="#5fe0a5">本番</text>
+      </g>
+      <g transform="translate(8,58)">
+        <rect width="6" height="6" rx="1" fill="#0b56c9"/>
+        <path d="M1,3 L2.5,4.5 L5,1.5" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="11" y="6" font-weight="600" fill="#1a2238">通話記録要約</text>
+        <text x="120" y="6" font-weight="700" fill="#5fe0a5">本番</text>
+      </g>
+      <g transform="translate(8,72)">
+        <rect width="6" height="6" rx="1" fill="#0b56c9"/>
+        <path d="M1,3 L2.5,4.5 L5,1.5" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="11" y="6" font-weight="600" fill="#1a2238">X 自動いいね</text>
+        <text x="120" y="6" font-weight="700" fill="#5fe0a5">本番</text>
+      </g>
+      <g transform="translate(8,86)">
+        <rect width="6" height="6" rx="1" fill="#0b56c9"/>
+        <path d="M1,3 L2.5,4.5 L5,1.5" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="11" y="6" font-weight="600" fill="#1a2238">就活</text>
+        <text x="120" y="6" font-weight="700" fill="#5fe0a5">本番</text>
+      </g>
+    </g>
+
+    <line x1="8" y1="100" x2="158" y2="100" stroke="#e0e8f5" stroke-width="0.7"/>
+
+    <!-- Watchdog / Sentinel -->
+    <g font-family="system-ui, sans-serif" font-size="6.5">
+      <text x="8" y="114" font-weight="700" fill="#0b3a7a">Watchdog</text>
+      <text x="60" y="114" fill="#5a6484">終了理由ログ記録</text>
+
+      <text x="8" y="126" font-weight="700" fill="#0b3a7a">Sentinel</text>
+      <text x="60" y="126" fill="#5a6484">異常終了検知フラグ</text>
+    </g>
+
+    <!-- 翌朝結果 -->
+    <rect x="8" y="132" width="150" height="12" rx="3" fill="#eef4fc"/>
+    <text x="83" y="141" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#0b56c9">翌朝には ToDo 処理済 + commit 済</text>
+  </g>
+</svg>

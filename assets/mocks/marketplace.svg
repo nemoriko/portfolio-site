@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-label="フリマ6サイト同時管理">
+  <defs>
+    <marker id="m_arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b56c9"/>
+    </marker>
+    <linearGradient id="m_photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d6bd2"/>
+      <stop offset="1" stop-color="#0a47a8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 左: 商品写真+画像認識 -->
+  <g transform="translate(14,18)">
+    <rect x="0" y="0" width="74" height="74" rx="8" fill="url(#m_photo)"/>
+    <!-- カメラアイコン -->
+    <g stroke="#ffffff" stroke-width="1.5" fill="none">
+      <rect x="22" y="28" width="30" height="20" rx="3"/>
+      <circle cx="37" cy="38" r="6"/>
+      <path d="M28 28 L31 24 L43 24 L46 28"/>
+    </g>
+    <!-- 認識ライン -->
+    <g stroke="#5fe0a5" stroke-width="1.2" fill="none" opacity="0.85">
+      <line x1="6" y1="56" x2="68" y2="56" stroke-dasharray="3 3"/>
+      <line x1="6" y1="60" x2="68" y2="60" stroke-dasharray="3 3"/>
+    </g>
+    <text x="37" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#0b3a7a">画像認識AI</text>
+    <!-- 認識結果 -->
+    <rect x="0" y="92" width="74" height="46" rx="6" fill="#ffffff" stroke="#c7d4ec" stroke-width="1"/>
+    <text x="6" y="104" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">商品名</text>
+    <line x1="6" y1="108" x2="68" y2="108" stroke="#9aa8c4" stroke-width="0.7"/>
+    <text x="6" y="118" font-family="system-ui, sans-serif" font-size="7" fill="#1a2238" font-weight="600">iPhone 13 128GB</text>
+    <text x="6" y="128" font-family="system-ui, sans-serif" font-size="7" fill="#0b56c9" font-weight="700">¥45,800</text>
+    <rect x="48" y="120" width="22" height="12" rx="2" fill="#5fe0a5"/>
+    <text x="59" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#063e22">AUTO</text>
+  </g>
+
+  <!-- 中央: 矢印 -->
+  <g transform="translate(96,82)">
+    <line x1="0" y1="0" x2="22" y2="0" stroke="#0b56c9" stroke-width="1.5" marker-end="url(#m_arr2)"/>
+    <text x="11" y="-6" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">出品文生成</text>
+  </g>
+
+  <!-- 右: 6サイト一括出品ボード -->
+  <g transform="translate(126,18)">
+    <rect x="0" y="0" width="180" height="144" rx="8" fill="#ffffff" stroke="#c7d4ec" stroke-width="1"/>
+    <rect x="0" y="0" width="180" height="22" rx="8" fill="#0b3a7a"/>
+    <rect x="0" y="14" width="180" height="8" fill="#0b3a7a"/>
+    <text x="10" y="15" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">同時出品中</text>
+    <circle cx="170" cy="11" r="3" fill="#5fe0a5">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- サイト行 6つ -->
+    <g font-family="system-ui, sans-serif" font-size="8">
+      <g transform="translate(8,32)">
+        <rect width="6" height="6" rx="1" fill="#ff5959"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">Mercari</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="59" height="6" rx="3" fill="#5fe0a5"/>
+        <text x="170" y="6" font-weight="700" fill="#0b56c9">✓</text>
+      </g>
+      <g transform="translate(8,46)">
+        <rect width="6" height="6" rx="1" fill="#7c3aed"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">Yahoo!Auc</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="56" height="6" rx="3" fill="#5fe0a5"/>
+        <text x="170" y="6" font-weight="700" fill="#0b56c9">✓</text>
+      </g>
+      <g transform="translate(8,60)">
+        <rect width="6" height="6" rx="1" fill="#dc2626"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">Rakuma</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="50" height="6" rx="3" fill="#5fe0a5"/>
+        <text x="170" y="6" font-weight="700" fill="#0b56c9">✓</text>
+      </g>
+      <g transform="translate(8,74)">
+        <rect width="6" height="6" rx="1" fill="#ff5800"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">PayPayフリマ</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="48" height="6" rx="3" fill="#1d6bd2"/>
+        <text x="170" y="6" font-weight="700" fill="#0b56c9">…</text>
+      </g>
+      <g transform="translate(8,88)">
+        <rect width="6" height="6" rx="1" fill="#fbbf24"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">Yahoo!フリマ</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="44" height="6" rx="3" fill="#1d6bd2"/>
+        <text x="170" y="6" font-weight="700" fill="#0b56c9">…</text>
+      </g>
+      <g transform="translate(8,102)">
+        <rect width="6" height="6" rx="1" fill="#16a34a"/>
+        <text x="12" y="6" font-weight="700" fill="#1a2238">ムスビー</text>
+        <rect x="100" y="0" width="64" height="6" rx="3" fill="#eef4fc"/>
+        <rect x="100" y="0" width="32" height="6" rx="3" fill="#1d6bd2"/>
+        <text x="170" y="6" font-weight="700" fill="#9aa8c4">…</text>
+      </g>
+    </g>
+
+    <line x1="8" y1="118" x2="172" y2="118" stroke="#e0e8f5" stroke-width="0.8"/>
+
+    <text x="8" y="132" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="#0b3a7a">売却検知 → 自動取り下げ</text>
+    <circle cx="166" cy="129" r="4" fill="#5fe0a5"/>
+    <path d="M163 129 L165 131 L169 127" stroke="#063e22" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

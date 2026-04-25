@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-label="X投稿自動化">
+  <defs>
+    <marker id="xp_arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b56c9"/>
+    </marker>
+  </defs>
+
+  <!-- 左: テーマ設定 -->
+  <g transform="translate(14,18)">
+    <rect x="0" y="0" width="92" height="144" rx="8" fill="#ffffff" stroke="#c7d4ec" stroke-width="1"/>
+    <rect x="0" y="0" width="92" height="20" rx="8" fill="#0b3a7a"/>
+    <rect x="0" y="12" width="92" height="8" fill="#0b3a7a"/>
+    <text x="46" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="#ffffff">Theme Config</text>
+
+    <text x="6" y="32" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">テーマ</text>
+    <rect x="6" y="36" width="80" height="14" rx="3" fill="#eef4fc" stroke="#0b56c9" stroke-width="0.8"/>
+    <text x="46" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="600" fill="#0b3a7a">AI実装の知見</text>
+
+    <text x="6" y="64" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">トーン</text>
+    <rect x="6" y="68" width="80" height="14" rx="3" fill="#eef4fc" stroke="#0b56c9" stroke-width="0.8"/>
+    <text x="46" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="600" fill="#0b3a7a">技術寄り・短文</text>
+
+    <text x="6" y="96" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">頻度</text>
+    <rect x="6" y="100" width="80" height="14" rx="3" fill="#eef4fc" stroke="#0b56c9" stroke-width="0.8"/>
+    <text x="46" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="600" fill="#0b3a7a">3 posts / day</text>
+
+    <rect x="6" y="122" width="80" height="14" rx="3" fill="#0b56c9"/>
+    <text x="46" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">Generate ▶</text>
+  </g>
+
+  <!-- 中央: AI生成矢印 -->
+  <g transform="translate(112,86)">
+    <line x1="0" y1="0" x2="22" y2="0" stroke="#0b56c9" stroke-width="1.5" marker-end="url(#xp_arr)"/>
+    <text x="11" y="-6" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#0b3a7a">AI生成</text>
+    <text x="11" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="#5a6484">投稿文</text>
+  </g>
+
+  <!-- 右: スケジュール一覧 -->
+  <g transform="translate(146,18)">
+    <rect x="0" y="0" width="160" height="144" rx="8" fill="#ffffff" stroke="#c7d4ec" stroke-width="1"/>
+    <rect x="0" y="0" width="160" height="22" rx="8" fill="#0b56c9"/>
+    <rect x="0" y="14" width="160" height="8" fill="#0b56c9"/>
+    <text x="10" y="15" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Scheduled Posts</text>
+    <text x="150" y="15" text-anchor="end" font-family="system-ui, sans-serif" font-size="7" font-weight="600" fill="rgba(255,255,255,0.85)">Today</text>
+
+    <!-- ポスト 1 -->
+    <g transform="translate(8,30)">
+      <rect x="0" y="0" width="22" height="22" rx="4" fill="#eef4fc"/>
+      <text x="11" y="13" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#0b56c9">09:00</text>
+      <text x="11" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" fill="#5a6484">Sent</text>
+      <text x="28" y="9" font-family="system-ui, sans-serif" font-size="6.5" fill="#1a2238" font-weight="600">Claude Codeのこの機能、</text>
+      <text x="28" y="17" font-family="system-ui, sans-serif" font-size="6.5" fill="#1a2238">業務効率が一気に変わる…</text>
+      <circle cx="138" cy="11" r="6" fill="#5fe0a5"/>
+      <path d="M135 11 L137 13 L141 9" stroke="#063e22" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <line x1="8" y1="58" x2="152" y2="58" stroke="#e0e8f5" stroke-width="0.8"/>
+
+    <!-- ポスト 2 -->
+    <g transform="translate(8,64)">
+      <rect x="0" y="0" width="22" height="22" rx="4" fill="#eef4fc"/>
+      <text x="11" y="13" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#0b56c9">13:30</text>
+      <text x="11" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" fill="#5a6484">Sent</text>
+      <text x="28" y="9" font-family="system-ui, sans-serif" font-size="6.5" fill="#1a2238" font-weight="600">エージェント実装の落とし穴</text>
+      <text x="28" y="17" font-family="system-ui, sans-serif" font-size="6.5" fill="#1a2238">3つにまとめてみた…</text>
+      <circle cx="138" cy="11" r="6" fill="#5fe0a5"/>
+      <path d="M135 11 L137 13 L141 9" stroke="#063e22" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <line x1="8" y1="92" x2="152" y2="92" stroke="#e0e8f5" stroke-width="0.8"/>
+
+    <!-- ポスト 3 (予約中) -->
+    <g transform="translate(8,98)">
+      <rect x="0" y="0" width="22" height="22" rx="4" fill="#fff7ec"/>
+      <text x="11" y="13" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#9a6800">19:00</text>
+      <text x="11" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" fill="#9a6800">Scheduled</text>
+      <text x="28" y="9" font-family="system-ui, sans-serif" font-size="6.5" fill="#1a2238" font-weight="600">RAG基盤の運用Tips</text>
+      <text x="28" y="17" font-family="system-ui, sans-serif" font-size="6.5" fill="#5a6484">…</text>
+      <circle cx="138" cy="11" r="6" fill="#fbbf24" opacity="0.85">
+        <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <line x1="8" y1="126" x2="152" y2="126" stroke="#e0e8f5" stroke-width="0.8"/>
+    <text x="80" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" font-weight="600" fill="#5a6484">運用後 手動操作 0</text>
+  </g>
+</svg>

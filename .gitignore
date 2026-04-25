@@ -1,0 +1,7 @@
+screenshots/
+take_screenshots.py
+take_screenshots_live.py
+take_screenshots_v2.py
+_check_video.py
+screenshots_v2/
+assets/video/*.bak

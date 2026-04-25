@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-label="Webマーケティング内製化">
+  <!-- 左: LP モック (PC) -->
+  <g transform="translate(14,18)">
+    <rect x="0" y="0" width="120" height="84" rx="6" fill="#ffffff" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+    <rect x="0" y="0" width="120" height="10" rx="6" fill="#e0e8f5"/>
+    <rect x="0" y="4" width="120" height="6" fill="#e0e8f5"/>
+    <circle cx="6" cy="5" r="1.3" fill="#ff5959"/>
+    <circle cx="10" cy="5" r="1.3" fill="#fbbf24"/>
+    <circle cx="14" cy="5" r="1.3" fill="#5fe0a5"/>
+
+    <!-- LP body -->
+    <rect x="0" y="10" width="120" height="34" fill="#0b3a7a"/>
+    <text x="60" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="900" fill="#ffffff">最短15分で出荷</text>
+    <text x="60" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="rgba(255,255,255,0.85)">買取専門サービス</text>
+    <rect x="44" y="38" width="32" height="4" rx="1" fill="#fbbf24"/>
+
+    <rect x="6" y="50" width="34" height="28" rx="3" fill="#eef4fc"/>
+    <rect x="44" y="50" width="34" height="28" rx="3" fill="#eef4fc"/>
+    <rect x="82" y="50" width="32" height="28" rx="3" fill="#eef4fc"/>
+
+    <text x="60" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#b8d1f6">LP / Web Site</text>
+  </g>
+
+  <!-- 中央下: チラシモック -->
+  <g transform="translate(14,108)">
+    <rect x="0" y="0" width="60" height="56" rx="3" fill="#ffffff"/>
+    <rect x="0" y="0" width="60" height="14" fill="#0b56c9"/>
+    <text x="30" y="9" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="900" fill="#ffffff">買取キャンペーン</text>
+    <line x1="4" y1="20" x2="56" y2="20" stroke="#9aa8c4" stroke-width="0.5"/>
+    <line x1="4" y1="24" x2="50" y2="24" stroke="#9aa8c4" stroke-width="0.5"/>
+    <line x1="4" y1="28" x2="46" y2="28" stroke="#9aa8c4" stroke-width="0.5"/>
+    <rect x="4" y="32" width="22" height="20" fill="#eef4fc"/>
+    <rect x="30" y="32" width="26" height="20" fill="#fff7ec"/>
+    <text x="30" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#b8d1f6">チラシ</text>
+  </g>
+
+  <g transform="translate(82,108)">
+    <rect x="0" y="0" width="56" height="56" rx="3" fill="#ffffff"/>
+    <rect x="6" y="6" width="44" height="20" rx="2" fill="#0b3a7a"/>
+    <text x="28" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="5" font-weight="800" fill="#ffffff">AI×実写</text>
+    <line x1="4" y1="32" x2="52" y2="32" stroke="#9aa8c4" stroke-width="0.5"/>
+    <line x1="4" y1="36" x2="48" y2="36" stroke="#9aa8c4" stroke-width="0.5"/>
+    <line x1="4" y1="40" x2="44" y2="40" stroke="#9aa8c4" stroke-width="0.5"/>
+    <rect x="4" y="44" width="24" height="8" rx="1" fill="#fbbf24"/>
+    <rect x="32" y="44" width="20" height="8" rx="1" fill="#5fe0a5"/>
+    <text x="28" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#b8d1f6">画像</text>
+  </g>
+
+  <!-- 右: 数値スタッツ -->
+  <g transform="translate(160,18)">
+    <rect x="0" y="0" width="146" height="146" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+    <text x="14" y="20" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,0.6)" letter-spacing="2">DELIVERABLES</text>
+
+    <!-- LP -->
+    <text x="14" y="44" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#ffffff" letter-spacing="-0.5">9</text>
+    <text x="44" y="40" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#b8d1f6">LP</text>
+    <text x="44" y="48" font-family="system-ui, sans-serif" font-size="6.5" fill="rgba(255,255,255,0.55)">本 制作</text>
+    <line x1="14" y1="56" x2="132" y2="56" stroke="rgba(255,255,255,0.10)" stroke-width="0.7"/>
+
+    <!-- チラシ -->
+    <text x="14" y="80" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#ffffff" letter-spacing="-0.5">1,000</text>
+    <text x="86" y="76" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#b8d1f6">枚</text>
+    <text x="86" y="84" font-family="system-ui, sans-serif" font-size="6.5" fill="rgba(255,255,255,0.55)">チラシ印刷配布</text>
+    <line x1="14" y1="92" x2="132" y2="92" stroke="rgba(255,255,255,0.10)" stroke-width="0.7"/>
+
+    <!-- 画像 -->
+    <text x="14" y="116" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#ffffff" letter-spacing="-0.5">100+</text>
+    <text x="76" y="112" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#b8d1f6">枚</text>
+    <text x="76" y="120" font-family="system-ui, sans-serif" font-size="6.5" fill="rgba(255,255,255,0.55)">AI×実写制作</text>
+
+    <rect x="14" y="128" width="118" height="10" rx="3" fill="#5fe0a5"/>
+    <text x="73" y="135" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6.5" font-weight="800" fill="#063e22">E-E-A-T 対応</text>
+  </g>
+</svg>

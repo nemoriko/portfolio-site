@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AI Agent Portfolio — 業務の痛みを起点にAIを設計し、本番まで届ける</title>
+  <meta name="description" content="営業現場×AIエージェント実装の個人ポートフォリオ。複数のAIシステムを設計・構築・本番運用しています。">
+  <meta property="og:title" content="AI Agent Portfolio">
+  <meta property="og:description" content="業務の痛みを起点にAIを設計し、本番まで届ける。">
+  <meta property="og:url" content="https://nemoriko.github.io/portfolio-site/">
+  <meta property="og:image" content="https://nemoriko.github.io/portfolio-site/assets/img/og.webp">
+  <meta property="og:image:secure_url" content="https://nemoriko.github.io/portfolio-site/assets/img/og.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Agent Portfolio — 業務の痛みを起点にAIを設計し、本番まで届ける">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nemoriko.github.io/portfolio-site/assets/img/og.webp">
+  <meta name="twitter:title" content="AI Agent Portfolio">
+  <meta name="twitter:description" content="業務の痛みを起点にAIを設計し、本番まで届ける。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">
+        <span class="nav-brand-mark"></span>
+        AI Agent Portfolio
+      </span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero.webp?v=5" onerror="this.remove()">
+        <source src="assets/video/hero.mp4?v=5" type="video/mp4">
+      </video>
+      <img class="hero-bg-image" src="assets/img/hero.webp?v=5" alt="" onerror="this.remove()">
+    </div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <span class="hero-badge">AI Agent / Sales × Implementation</span>
+        <h1 class="hero-title">
+          業務の痛みを起点に<br>
+          <span class="hl">AIを設計し、本番まで届ける</span>
+        </h1>
+        <p class="hero-sub">
+          営業実務の現場感と、AIエージェント実装スキルを掛け合わせる。<br>
+          単発のプロトタイプではなく「他者が継続して使える」状態まで届けることに、こだわっています。
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">264<span class="suffix">件</span></span>
+            <span class="stat-label">通話自動要約 累計</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">6<span class="suffix">サイト</span></span>
+            <span class="stat-label">フリマ同時運用</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2,034<span class="suffix">件</span></span>
+            <span class="stat-label">RAG知識ベース</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-side reveal">
+          <span class="section-eyebrow">About</span>
+          <p class="about-mission">
+            AIを<span>万能視せず</span>、<br>
+            業務の現場感と、エージェント実装力を<br>
+            <span>橋渡しする</span>立場として。
+          </p>
+          <div class="about-callout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            <span>営業 × AI実装をつなぐ翻訳者</span>
+          </div>
+          <div class="about-visual">
+            <img src="assets/img/about.webp" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+        </div>
+
+        <div class="about-body reveal">
+          <p>
+            現職では営業部に所属しながら<strong>社内AI推進担当</strong>を兼務。業務課題の発見からAI自動化システムの要件定義・実装・社内展開までを一気通貫で担っています。法人営業自動化システムのコア部分を実働約8時間で構築するなど、スピードとデリバリー力を強みとしています。
+          </p>
+          <p>
+            個人環境でも通話記録自動要約・フリマ6サイト管理（一部機能稼働中）・24時間自律AIエージェント基盤・日記自動記録・RAG基盤など複数のAIシステムを並行して構築・運用中。単発のプロトタイプではなく「他者が継続利用できる状態まで届ける」ことを重視しています。
+          </p>
+          <p>
+            生成AIの弱点（情報の画一化・独自性欠如）を理解した上で人間と役割分担を設計する立場として、<strong>AIコンサル・AI活用支援職</strong>へのキャリアチェンジを目指しています。
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">Sales × AI</span>
+            <span class="about-tag">Agent Implementation</span>
+            <span class="about-tag">Production-Ready</span>
+            <span class="about-tag">DX Promotion</span>
+            <span class="about-tag">Solo Builder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 & 4. Projects -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-eyebrow">Projects</span>
+        <h2 class="section-title">複数のAIシステムを<br>個人で設計・構築・運用</h2>
+        <p class="section-lead">
+          通話要約・フリマ管理・自律エージェント基盤・日記自動記録・RAG基盤など、
+          要件定義から運用までを一人で進めています（一部は本番運用中・一部は開発継続中）。
+        </p>
+      </div>
+
+      <h3 class="subsection-title reveal">AIエージェント実装（個人プロジェクト）</h3>
+      <div class="card-grid reveal">
+
+        <article class="card">
+          <div class="card-mock">
+            <img src="assets/mocks/recording.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Voice → AI Pipeline</span>
+            <h4 class="card-title">通話記録 自動要約パイプライン</h4>
+            <p class="card-desc">
+              通話録音 → Whisper APIで自動文字起こし → 話者分離 → AI要約・次のアクション生成 → Obsidian自動保存。タスクスケジューラで5分ごとに無人実行。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">264<span style="font-size:0.7em;">件</span></span>
+                <span class="card-meta-label">累計要約</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">5<span style="font-size:0.7em;">分</span></span>
+                <span class="card-meta-label">実行間隔</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Whisper API</span>
+              <span class="tag">pyannote</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-mock">
+            <img src="assets/mocks/marketplace.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Multi-platform Sync</span>
+            <h4 class="card-title">フリマ・オークション 6サイト 在庫・出品管理（一部機能稼働中）</h4>
+            <p class="card-desc">
+              商品写真 → AI画像認識で商品名特定 → 出品文章自動生成 → 相場調査 → 6サイト一括出品。売却検知 → 他サイト自動取り下げまでをコアフローに据え、各機能を段階的に実装・稼働中。GUI 大半・商用化は未着手。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">6<span style="font-size:0.7em;">サイト</span></span>
+                <span class="card-meta-label">対応サイト数</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">WIP</span>
+                <span class="card-meta-label">一部機能稼働中</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">画像認識AI</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-mock">
+            <img src="assets/mocks/autonomous.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Scheduled Agent Infrastructure</span>
+            <h4 class="card-title">自律AIエージェント基盤（autonomous）</h4>
+            <p class="card-desc">
+              Windowsタスクスケジューラで時間帯を分散して定期起動し、夜間・早朝に Claude Code セッションを自動実行。<strong>フリマ対応・日記自動記録・通話記録・X自動いいね・就活の5プロジェクト</strong>で本番運用中。翌朝にはToDoが処理済み・commit済みの状態に。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">5<span style="font-size:0.7em;">本</span></span>
+                <span class="card-meta-label">本番運用</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">翌朝</span>
+                <span class="card-meta-label">自動 commit 済</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Python</span>
+              <span class="tag">watchdog</span>
+              <span class="tag">Win Scheduler</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-mock">
+            <img src="assets/mocks/diary.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Daily Aggregation</span>
+            <h4 class="card-title">日記自動記録システム</h4>
+            <p class="card-desc">
+              毎日0時にセッション履歴・Googleカレンダー・通話文字起こし・メールを自動収集してObsidian日記に集約。複数API統合（Gmail / Google Calendar / Obsidian）と Claude Code による要約・整形。社内日報・業務日誌システムへの転用も可能な構造。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">0<span style="font-size:0.7em;">時</span></span>
+                <span class="card-meta-label">日次自動実行</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">3<span style="font-size:0.7em;">系統</span></span>
+                <span class="card-meta-label">API統合</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Python</span>
+              <span class="tag">Gmail API</span>
+              <span class="tag">GCal API</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 class="subsection-title reveal" style="margin-top: 4rem;">現職での実装</h3>
+      <div class="card-grid card-grid-2 reveal">
+
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="assets/mocks/sales-outreach.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">B2B Outreach (WIP)</span>
+            <h4 class="card-title">法人営業 リサーチ・アウトリーチ自動化（開発中）</h4>
+            <p class="card-desc">
+              営業先リサーチに時間がとられ営業活動がスケールしない課題に対し、Claude Code + Playwright で自動化スクリプトを開発中。<strong>実働約8時間でコア部分を構築</strong>し、現在も週末に開発継続中。一部機能のみ稼働中で、本番稼働の自動アプローチには未解決の課題が残っており段階的に検証中。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">8<span style="font-size:0.7em;">時間</span></span>
+                <span class="card-meta-label">コア構築</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">WIP</span>
+                <span class="card-meta-label">改善継続中</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="assets/mocks/marketing.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">In-house Marketing</span>
+            <h4 class="card-title">Webマーケティング 内製化</h4>
+            <p class="card-desc">
+              他部署依頼で数営業日を要するLP・チラシ・画像制作を営業部内で内製化。<strong>LP累計9本・チラシ3種1,000枚印刷配布・画像約100枚</strong>制作。AI生成＋実写素材のハイブリッドでE-E-A-T対策も両立。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-num">9<span style="font-size:0.7em;">本</span></span>
+                <span class="card-meta-label">LP制作</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-num">1,000<span style="font-size:0.7em;">枚</span></span>
+                <span class="card-meta-label">チラシ配布</span>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Gemini</span>
+              <span class="tag">Claude Code</span>
+              <span class="tag">Canva</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 class="subsection-title reveal" style="margin-top: 4rem;">個人開発 — RAG基盤</h3>
+      <div class="rag-card reveal">
+        <div class="rag-mock">
+          <img src="assets/mocks/rag.svg" alt="" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="rag-content">
+          <span class="card-eyebrow">Knowledge Persistence</span>
+          <h4>AI会話記録 永続化・検索 RAG基盤</h4>
+          <p>
+            Claude Code とのセッションが毎回リセットされる課題を解決するため、全履歴を永続化・検索可能にするRAG基盤を個人で設計・実装。SQLite FTS5（全文検索）と sqlite-vec（768次元ベクトル検索）のハイブリッド構成で、RRFスコア統合＋時間減衰ランキングを実装。Stop/UserPromptSubmitフックで自動保存。
+          </p>
+          <div class="rag-stats">
+            <div class="rag-stat">
+              <span class="rag-num">2,034</span>
+              <span class="rag-label">件 蓄積</span>
+            </div>
+            <div class="rag-stat">
+              <span class="rag-num">99%</span>
+              <span class="rag-label">ベクトル化率</span>
+            </div>
+            <div class="rag-stat">
+              <span class="rag-num">768</span>
+              <span class="rag-label">次元 ベクトル</span>
+            </div>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQLite FTS5</span>
+            <span class="tag">sqlite-vec</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Ruri v3</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-eyebrow">Skills</span>
+        <h2 class="section-title">スキルマトリクス</h2>
+        <p class="section-lead">
+          AI実装に閉じず、ビジネス側の視点や運用設計も自分で持つ。
+        </p>
+      </div>
+
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <div class="skill-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h4>AI実装・自動化設計</h4>
+          <div class="skill-pills">
+            <span class="pill">Claude Code</span>
+            <span class="pill">Gemini</span>
+            <span class="pill">Whisper API</span>
+            <span class="pill">エージェント設計</span>
+            <span class="pill">要件定義〜本番</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h4>実装スタック</h4>
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">Playwright</span>
+            <span class="pill">SQLite</span>
+            <span class="pill">Flask</span>
+            <span class="pill">Win Scheduler</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h4>DX推進・組織展開</h4>
+          <div class="skill-pills">
+            <span class="pill">社内AI推進</span>
+            <span class="pill">承認獲得・交渉</span>
+            <span class="pill">講習設計</span>
+            <span class="pill">運用・引き継ぎ</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>
+            </svg>
+          </div>
+          <h4>マーケティング・ビジネス</h4>
+          <div class="skill-pills">
+            <span class="pill">LP制作（9本）</span>
+            <span class="pill">SEO・E-E-A-T</span>
+            <span class="pill">B2B営業</span>
+            <span class="pill">競合調査</span>
+            <span class="pill">法令対応</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Timeline -->
+  <section class="section section-alt" id="timeline">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-eyebrow">Timeline</span>
+        <h2 class="section-title">経歴</h2>
+      </div>
+      <div class="timeline reveal">
+
+        <div class="timeline-item current">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2026年1月 〜 現在</span>
+            <h4 class="timeline-role">営業部 ／ 社内AI推進担当（補助）</h4>
+            <p class="timeline-company">モバイル通信系企業</p>
+            <ul class="timeline-bullets">
+              <li>法人営業自動化システムの設計・構築（コア部分：実働約8時間）</li>
+              <li>Webマーケティング内製化（LP9本・チラシ1,000枚）</li>
+              <li>社内AI推進：Claude Code専用Sandbox環境を情報システム部門へ提案・承認取得</li>
+              <li>AI講習の企画・設計・講師役同僚への個別指導</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2012年 〜 2020年</span>
+            <h4 class="timeline-role">代表</h4>
+            <p class="timeline-company">個人事業（通信機器小売業）</p>
+            <ul class="timeline-bullets">
+              <li>スマートフォン・タブレット等の買取・販売を独力で運営</li>
+              <li>平均月商250万円・累計取引800件以上（好評価率98.3%）</li>
+              <li>仕入〜出荷フローを独自効率化、売れてから出荷完了まで最短15分</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/scroll.js?v=5"></script>
+</body>
+</html>
