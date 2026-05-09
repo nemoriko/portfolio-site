@@ -5,3 +5,6 @@ take_screenshots_v2.py
 _check_video.py
 screenshots_v2/
 assets/video/*.bak
+
+# v2 は作りかけ・公開しない（2026-05-09 統合時追加）
+v2/
