@@ -110,7 +110,7 @@ assets/video/hero.mp4
 | 種類 | パス / URL | 用途 |
 |---|---|---|
 | 現行LP | `C:/claude-workspace/portfolio-site/index.html` | 現状確認 |
-| マスターCVデータ | `C:/Users/nemo2023/OneDrive/claude-workspace-private/就活/career-ops/cv.md` | 実績の数字・事実の一次ソース |
+| マスターCVデータ | `~/OneDrive/claude-workspace-private/就活/career-ops/cv.md` | 実績の数字・事実の一次ソース |
 | 先行事例調査結果 | 会話履歴（2026-05-14セッション） | ビジュアル手法の参考 |
 | lp-workspaceガイド | `C:/claude-workspace/lp-workspace/guides/` | フロー・ルール |
 
