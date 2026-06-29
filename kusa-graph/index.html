@@ -58,23 +58,6 @@
   .view-btn:hover { border-color: var(--accent2); color: var(--fg); }
   .view-btn.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
   .view-hint { font-size: .75rem; color: var(--muted); margin-left: 6px; }
-  .metric-group { display: flex; gap: 4px; align-items: center; margin-left: auto; }
-  .metric-group-label { font-size: .75rem; color: var(--muted); margin-right: 2px; }
-  .metric-btn {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: .78rem;
-    font-weight: bold;
-    padding: 3px 12px;
-    transition: all .15s;
-  }
-  .metric-btn:hover { border-color: var(--accent2); color: var(--fg); }
-  .metric-btn.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
-  .today-hours-badge { font-size: .8rem; color: var(--fg); margin-left: auto; }
-
   /* ─────── サマリカード ─────── */
   .summary-grid {
     display: grid;
@@ -180,112 +163,6 @@
   }
   .legend-label { margin-right: 8px; }
 
-  /* ─────── ヒートマップナビ ─────── */
-  .hm-nav {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
-    align-items: center;
-  }
-  .hm-btn {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: .82rem;
-    padding: 4px 12px;
-  }
-  .hm-btn:hover { border-color: var(--accent2); color: var(--fg); }
-  .hm-btn.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
-  .hm-nav-hint { font-size: .72rem; color: var(--muted); margin-left: 4px; }
-  .hm-nav-sep { width: 1px; height: 18px; background: var(--border); margin: 0 6px; flex-shrink: 0; }
-  .hm-chart-btn {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: .82rem;
-    padding: 4px 12px;
-  }
-  .hm-chart-btn:hover { border-color: var(--accent2); color: var(--fg); }
-  .hm-chart-btn.active { border-color: var(--accent); color: var(--accent); }
-  .hm-axis-wrap { display: none; gap: 4px; align-items: center; }
-  .hm-axis-wrap.visible { display: flex; }
-  .hm-axis-btn {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: .82rem;
-    padding: 4px 10px;
-  }
-  .hm-axis-btn:hover { border-color: var(--accent2); color: var(--fg); }
-  .hm-axis-btn.active { border-color: var(--accent); color: var(--accent); }
-
-  /* ─────── チャートパネル ─────── */
-  .heatmap-wrap {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 22px 16px;
-    margin-bottom: 28px;
-    overflow-x: auto;
-  }
-
-  /* ── 縦軸モード: 時間=行・曜日=列（git元実装）── */
-  #heatmap-grid.mode-vertical {
-    display: grid;
-    grid-template-columns: 32px repeat(7, 1fr);
-    gap: 3px;
-    min-width: 320px;
-  }
-  #heatmap-grid.mode-vertical .hm-header { font-size: .7rem; color: var(--muted); text-align: center; padding: 2px 0; }
-  #heatmap-grid.mode-vertical .hm-hour-label { font-size: .68rem; color: var(--muted); text-align: right; padding-right: 6px; line-height: 14px; }
-  #heatmap-grid.mode-vertical .hm-cell { height: 14px; width: auto; border-radius: 2px; cursor: default; }
-  #heatmap-grid.mode-vertical .hm-wd-hours { font-size: .75rem; color: var(--accent); text-align: center; padding-top: 6px; font-weight: bold; }
-
-  /* ── 横軸モード: 曜日=行・時間=列 ── */
-  #heatmap-grid { display: block; }
-  #heatmap-grid.mode-bars { display: flex; flex-direction: column; gap: 10px; }
-  .hm-header-row { display: flex; gap: 2px; margin-bottom: 4px; align-items: center; }
-  .hm-row { display: flex; gap: 2px; align-items: center; }
-  .hm-row-label {
-    width: 30px; text-align: right; font-size: .7rem;
-    color: var(--muted); margin-right: 2px; flex-shrink: 0;
-  }
-  .hm-col-label {
-    width: 16px; text-align: center; font-size: .75rem; color: var(--muted);
-  }
-  .hm-cell {
-    width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; cursor: default;
-  }
-  .hm-wd-hours-right {
-    width: 36px; text-align: right; font-size: .82rem;
-    color: var(--accent); font-weight: bold; flex-shrink: 0; margin-left: 8px;
-  }
-
-  /* 曜日別バーチャート */
-  .wd-bar-row { display: flex; align-items: center; gap: 12px; }
-  .wd-bar-label {
-    width: 20px; text-align: right; font-size: .85rem;
-    color: var(--fg); flex-shrink: 0;
-  }
-  .wd-bar-track {
-    flex: 1; height: 20px; background: var(--g0);
-    border-radius: 4px; overflow: hidden; border: 1px solid var(--g0-border);
-  }
-  .wd-bar-fill {
-    height: 100%; background: var(--accent2);
-    border-radius: 3px; transition: width .3s ease;
-  }
-  .wd-bar-val {
-    width: 42px; text-align: right; font-size: .85rem;
-    color: var(--accent); font-weight: bold; flex-shrink: 0;
-  }
-
   /* ─────── 更新ボタン（右上固定）─────── */
   .update-corner {
     position: fixed;
@@ -348,7 +225,7 @@
   <div class="header-row">
     <h1>AI Activity Stats</h1>
     <span class="page-subtitle">Claude / Codex を使って作業した記録</span>
-    <span class="sub">生成日時: 2026年06月27日 00:53 JST</span>
+    <span class="sub">生成日時: 2026年06月30日 02:41 JST</span>
   </div>
 
   <!-- ─── ビュー切り替え ─── -->
@@ -358,37 +235,32 @@
     <button class="view-btn" data-view="commit" onclick="switchView('commit')">コミット数</button>
     <span class="view-hint">より正確な活動指標</span>
     
-    <span class="metric-group">
-      <span class="metric-group-label">表示:</span>
-      <button class="metric-btn active" data-metric="count" onclick="switchMetric('count')">件数</button>
-      <button class="metric-btn" data-metric="hours" onclick="switchMetric('hours')">活動時間</button>
-    </span>
   </div>
 
   <!-- ─── サマリカード ─── -->
   <div class="summary-grid">
     <div class="card">
-      <div class="val" id="stat-streak-current">96</div>
+      <div class="val" id="stat-streak-current">99</div>
       <div class="lbl" id="stat-streak-current-lbl">現在の連続日数（日）</div>
     </div>
     <div class="card">
-      <div class="val" id="stat-streak-longest">96</div>
+      <div class="val" id="stat-streak-longest">99</div>
       <div class="lbl" id="stat-streak-longest-lbl">最長連続日数（日）</div>
     </div>
     <div class="card">
-      <div class="val" id="stat-active-days">96</div>
+      <div class="val" id="stat-active-days">99</div>
       <div class="lbl" id="stat-active-days-lbl">活動日数（追跡期間）</div>
     </div>
     <div class="card">
-      <div class="val" id="stat-today">30</div>
+      <div class="val" id="stat-today">79</div>
       <div class="lbl" id="stat-today-lbl">今日のプロンプト数</div>
     </div>
     <div class="card">
-      <div class="val" id="stat-this-week">3664</div>
+      <div class="val" id="stat-this-week">1230</div>
       <div class="lbl" id="stat-this-week-lbl">今週のプロンプト数</div>
     </div>
     <div class="card">
-      <div class="val" id="stat-total">26,397</div>
+      <div class="val" id="stat-total">28,155</div>
       <div class="lbl" id="stat-total-lbl">総プロンプト数（追跡）</div>
     </div>
   </div>
@@ -429,26 +301,6 @@
     </div>
   </div>
 
-  <!-- ─── 時間帯ヒートマップ / 曜日別活動時間 ─── -->
-  <div class="hm-nav">
-    <button class="hm-btn active" data-mode="this_week" onclick="switchHeatmap('this_week')">今週</button>
-    <button class="hm-btn" data-mode="last_week" onclick="switchHeatmap('last_week')">先週</button>
-    <button class="hm-btn" data-mode="all_time" onclick="switchHeatmap('all_time')">全期間</button>
-    <span class="hm-nav-hint">← → キーで切り替え</span>
-    <span class="hm-nav-sep"></span>
-    <button class="hm-chart-btn active" data-chart="heatmap" onclick="switchChartType('heatmap')">時間帯</button>
-    <button class="hm-chart-btn" data-chart="bars" onclick="switchChartType('bars')">曜日別</button>
-    <div class="hm-axis-wrap visible" id="hm-axis-wrap">
-      <span class="hm-nav-sep"></span>
-      <button class="hm-axis-btn active" data-axis="vertical" onclick="switchHeatmapAxis('vertical')">縦</button>
-      <button class="hm-axis-btn" data-axis="horizontal" onclick="switchHeatmapAxis('horizontal')">横</button>
-    </div>
-  </div>
-  <p class="section-title" id="hm-title">時間帯別活動分布（今週）</p>
-  <div class="heatmap-wrap">
-    <div id="heatmap-grid"></div>
-  </div>
-
   <div style="color:var(--muted); font-size:.78rem; margin-top:8px;">
     * コミット数はマージコミットを除く。プロンプト数は sui-memory（Claude Code 会話ログ, 2026-03-24〜）+ Codex CLI（2026-05-10〜）の合算。
     中間データは PII を含むため外部非公開。このファイルは非PII集計のみ。
@@ -464,27 +316,14 @@
 
   // ── 埋め込みデータ ──
   const COMMIT_DATA = {
-    cells: [{"empty": false, "date": "2026-03-15", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-16", "count": 2, "level": 1}, {"empty": false, "date": "2026-03-17", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-18", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-19", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-20", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-21", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-22", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-23", "count": 6, "level": 2}, {"empty": false, "date": "2026-03-24", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-25", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-26", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-27", "count": 2, "level": 1}, {"empty": false, "date": "2026-03-28", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-29", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-30", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-31", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-01", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-02", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-03", "count": 18, "level": 3}, {"empty": false, "date": "2026-04-04", "count": 28, "level": 4}, {"empty": false, "date": "2026-04-05", "count": 33, "level": 4}, {"empty": false, "date": "2026-04-06", "count": 13, "level": 3}, {"empty": false, "date": "2026-04-07", "count": 47, "level": 4}, {"empty": false, "date": "2026-04-08", "count": 39, "level": 4}, {"empty": false, "date": "2026-04-09", "count": 26, "level": 4}, {"empty": false, "date": "2026-04-10", "count": 34, "level": 4}, {"empty": false, "date": "2026-04-11", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-12", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-13", "count": 2, "level": 1}, {"empty": false, "date": "2026-04-14", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-15", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-16", "count": 6, "level": 2}, {"empty": false, "date": "2026-04-17", "count": 5, "level": 2}, {"empty": false, "date": "2026-04-18", "count": 41, "level": 4}, {"empty": false, "date": "2026-04-19", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-20", "count": 31, "level": 4}, {"empty": false, "date": "2026-04-21", "count": 21, "level": 4}, {"empty": false, "date": "2026-04-22", "count": 28, "level": 4}, {"empty": false, "date": "2026-04-23", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-24", "count": 13, "level": 3}, {"empty": false, "date": "2026-04-25", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-26", "count": 18, "level": 3}, {"empty": false, "date": "2026-04-27", "count": 14, "level": 3}, {"empty": false, "date": "2026-04-28", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-29", "count": 17, "level": 3}, {"empty": false, "date": "2026-04-30", "count": 5, "level": 2}, {"empty": false, "date": "2026-05-01", "count": 0, "level": 0}, {"empty": false, "date": "2026-05-02", "count": 12, "level": 3}, {"empty": false, "date": "2026-05-03", "count": 12, "level": 3}, {"empty": false, "date": "2026-05-04", "count": 30, "level": 4}, {"empty": false, "date": "2026-05-05", "count": 33, "level": 4}, {"empty": false, "date": "2026-05-06", "count": 2, "level": 1}, {"empty": false, "date": "2026-05-07", "count": 9, "level": 2}, {"empty": false, "date": "2026-05-08", "count": 6, "level": 2}, {"empty": false, "date": "2026-05-09", "count": 51, "level": 4}, {"empty": false, "date": "2026-05-10", "count": 83, "level": 4}, {"empty": false, "date": "2026-05-11", "count": 21, "level": 4}, {"empty": false, "date": "2026-05-12", "count": 20, "level": 4}, {"empty": false, "date": "2026-05-13", "count": 54, "level": 4}, {"empty": false, "date": "2026-05-14", "count": 97, "level": 4}, {"empty": false, "date": "2026-05-15", "count": 57, "level": 4}, {"empty": false, "date": "2026-05-16", "count": 26, "level": 4}, {"empty": false, "date": "2026-05-17", "count": 86, "level": 4}, {"empty": false, "date": "2026-05-18", "count": 92, "level": 4}, {"empty": false, "date": "2026-05-19", "count": 59, "level": 4}, {"empty": false, "date": "2026-05-20", "count": 65, "level": 4}, {"empty": false, "date": "2026-05-21", "count": 80, "level": 4}, {"empty": false, "date": "2026-05-22", "count": 80, "level": 4}, {"empty": false, "date": "2026-05-23", "count": 66, "level": 4}, {"empty": false, "date": "2026-05-24", "count": 27, "level": 4}, {"empty": false, "date": "2026-05-25", "count": 36, "level": 4}, {"empty": false, "date": "2026-05-26", "count": 9, "level": 2}, {"empty": false, "date": "2026-05-27", "count": 50, "level": 4}, {"empty": false, "date": "2026-05-28", "count": 29, "level": 4}, {"empty": false, "date": "2026-05-29", "count": 89, "level": 4}, {"empty": false, "date": "2026-05-30", "count": 90, "level": 4}, {"empty": false, "date": "2026-05-31", "count": 49, "level": 4}, {"empty": false, "date": "2026-06-01", "count": 69, "level": 4}, {"empty": false, "date": "2026-06-02", "count": 38, "level": 4}, {"empty": false, "date": "2026-06-03", "count": 80, "level": 4}, {"empty": false, "date": "2026-06-04", "count": 86, "level": 4}, {"empty": false, "date": "2026-06-05", "count": 82, "level": 4}, {"empty": false, "date": "2026-06-06", "count": 24, "level": 4}, {"empty": false, "date": "2026-06-07", "count": 19, "level": 3}, {"empty": false, "date": "2026-06-08", "count": 18, "level": 3}, {"empty": false, "date": "2026-06-09", "count": 77, "level": 4}, {"empty": false, "date": "2026-06-10", "count": 30, "level": 4}, {"empty": false, "date": "2026-06-11", "count": 65, "level": 4}, {"empty": false, "date": "2026-06-12", "count": 59, "level": 4}, {"empty": false, "date": "2026-06-13", "count": 46, "level": 4}, {"empty": false, "date": "2026-06-14", "count": 26, "level": 4}, {"empty": false, "date": "2026-06-15", "count": 45, "level": 4}, {"empty": false, "date": "2026-06-16", "count": 110, "level": 4}, {"empty": false, "date": "2026-06-17", "count": 51, "level": 4}, {"empty": false, "date": "2026-06-18", "count": 16, "level": 3}, {"empty": false, "date": "2026-06-19", "count": 46, "level": 4}, {"empty": false, "date": "2026-06-20", "count": 46, "level": 4}, {"empty": false, "date": "2026-06-21", "count": 81, "level": 4}, {"empty": false, "date": "2026-06-22", "count": 189, "level": 4}, {"empty": false, "date": "2026-06-23", "count": 64, "level": 4}, {"empty": false, "date": "2026-06-24", "count": 40, "level": 4}, {"empty": false, "date": "2026-06-25", "count": 35, "level": 4}, {"empty": false, "date": "2026-06-26", "count": 63, "level": 4}, {"empty": false, "date": "2026-06-27", "count": 11, "level": 3}],
+    cells: [{"empty": false, "date": "2026-03-15", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-16", "count": 2, "level": 1}, {"empty": false, "date": "2026-03-17", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-18", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-19", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-20", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-21", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-22", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-23", "count": 6, "level": 2}, {"empty": false, "date": "2026-03-24", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-25", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-26", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-27", "count": 2, "level": 1}, {"empty": false, "date": "2026-03-28", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-29", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-30", "count": 1, "level": 1}, {"empty": false, "date": "2026-03-31", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-01", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-02", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-03", "count": 18, "level": 3}, {"empty": false, "date": "2026-04-04", "count": 28, "level": 4}, {"empty": false, "date": "2026-04-05", "count": 33, "level": 4}, {"empty": false, "date": "2026-04-06", "count": 13, "level": 3}, {"empty": false, "date": "2026-04-07", "count": 47, "level": 4}, {"empty": false, "date": "2026-04-08", "count": 39, "level": 4}, {"empty": false, "date": "2026-04-09", "count": 26, "level": 4}, {"empty": false, "date": "2026-04-10", "count": 34, "level": 4}, {"empty": false, "date": "2026-04-11", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-12", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-13", "count": 2, "level": 1}, {"empty": false, "date": "2026-04-14", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-15", "count": 1, "level": 1}, {"empty": false, "date": "2026-04-16", "count": 6, "level": 2}, {"empty": false, "date": "2026-04-17", "count": 5, "level": 2}, {"empty": false, "date": "2026-04-18", "count": 41, "level": 4}, {"empty": false, "date": "2026-04-19", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-20", "count": 31, "level": 4}, {"empty": false, "date": "2026-04-21", "count": 21, "level": 4}, {"empty": false, "date": "2026-04-22", "count": 28, "level": 4}, {"empty": false, "date": "2026-04-23", "count": 0, "level": 0}, {"empty": false, "date": "2026-04-24", "count": 13, "level": 3}, {"empty": false, "date": "2026-04-25", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-26", "count": 18, "level": 3}, {"empty": false, "date": "2026-04-27", "count": 14, "level": 3}, {"empty": false, "date": "2026-04-28", "count": 9, "level": 2}, {"empty": false, "date": "2026-04-29", "count": 17, "level": 3}, {"empty": false, "date": "2026-04-30", "count": 5, "level": 2}, {"empty": false, "date": "2026-05-01", "count": 0, "level": 0}, {"empty": false, "date": "2026-05-02", "count": 12, "level": 3}, {"empty": false, "date": "2026-05-03", "count": 12, "level": 3}, {"empty": false, "date": "2026-05-04", "count": 30, "level": 4}, {"empty": false, "date": "2026-05-05", "count": 33, "level": 4}, {"empty": false, "date": "2026-05-06", "count": 2, "level": 1}, {"empty": false, "date": "2026-05-07", "count": 9, "level": 2}, {"empty": false, "date": "2026-05-08", "count": 6, "level": 2}, {"empty": false, "date": "2026-05-09", "count": 51, "level": 4}, {"empty": false, "date": "2026-05-10", "count": 83, "level": 4}, {"empty": false, "date": "2026-05-11", "count": 21, "level": 4}, {"empty": false, "date": "2026-05-12", "count": 20, "level": 4}, {"empty": false, "date": "2026-05-13", "count": 54, "level": 4}, {"empty": false, "date": "2026-05-14", "count": 97, "level": 4}, {"empty": false, "date": "2026-05-15", "count": 57, "level": 4}, {"empty": false, "date": "2026-05-16", "count": 26, "level": 4}, {"empty": false, "date": "2026-05-17", "count": 86, "level": 4}, {"empty": false, "date": "2026-05-18", "count": 92, "level": 4}, {"empty": false, "date": "2026-05-19", "count": 59, "level": 4}, {"empty": false, "date": "2026-05-20", "count": 65, "level": 4}, {"empty": false, "date": "2026-05-21", "count": 80, "level": 4}, {"empty": false, "date": "2026-05-22", "count": 80, "level": 4}, {"empty": false, "date": "2026-05-23", "count": 66, "level": 4}, {"empty": false, "date": "2026-05-24", "count": 27, "level": 4}, {"empty": false, "date": "2026-05-25", "count": 36, "level": 4}, {"empty": false, "date": "2026-05-26", "count": 9, "level": 2}, {"empty": false, "date": "2026-05-27", "count": 50, "level": 4}, {"empty": false, "date": "2026-05-28", "count": 29, "level": 4}, {"empty": false, "date": "2026-05-29", "count": 89, "level": 4}, {"empty": false, "date": "2026-05-30", "count": 90, "level": 4}, {"empty": false, "date": "2026-05-31", "count": 49, "level": 4}, {"empty": false, "date": "2026-06-01", "count": 69, "level": 4}, {"empty": false, "date": "2026-06-02", "count": 38, "level": 4}, {"empty": false, "date": "2026-06-03", "count": 80, "level": 4}, {"empty": false, "date": "2026-06-04", "count": 86, "level": 4}, {"empty": false, "date": "2026-06-05", "count": 82, "level": 4}, {"empty": false, "date": "2026-06-06", "count": 24, "level": 4}, {"empty": false, "date": "2026-06-07", "count": 20, "level": 4}, {"empty": false, "date": "2026-06-08", "count": 20, "level": 4}, {"empty": false, "date": "2026-06-09", "count": 83, "level": 4}, {"empty": false, "date": "2026-06-10", "count": 33, "level": 4}, {"empty": false, "date": "2026-06-11", "count": 69, "level": 4}, {"empty": false, "date": "2026-06-12", "count": 62, "level": 4}, {"empty": false, "date": "2026-06-13", "count": 49, "level": 4}, {"empty": false, "date": "2026-06-14", "count": 34, "level": 4}, {"empty": false, "date": "2026-06-15", "count": 48, "level": 4}, {"empty": false, "date": "2026-06-16", "count": 114, "level": 4}, {"empty": false, "date": "2026-06-17", "count": 51, "level": 4}, {"empty": false, "date": "2026-06-18", "count": 16, "level": 3}, {"empty": false, "date": "2026-06-19", "count": 63, "level": 4}, {"empty": false, "date": "2026-06-20", "count": 51, "level": 4}, {"empty": false, "date": "2026-06-21", "count": 83, "level": 4}, {"empty": false, "date": "2026-06-22", "count": 194, "level": 4}, {"empty": false, "date": "2026-06-23", "count": 64, "level": 4}, {"empty": false, "date": "2026-06-24", "count": 40, "level": 4}, {"empty": false, "date": "2026-06-25", "count": 35, "level": 4}, {"empty": false, "date": "2026-06-26", "count": 63, "level": 4}, {"empty": false, "date": "2026-06-27", "count": 93, "level": 4}, {"empty": false, "date": "2026-06-28", "count": 72, "level": 4}, {"empty": false, "date": "2026-06-29", "count": 74, "level": 4}, {"empty": false, "date": "2026-06-30", "count": 2, "level": 1}],
     stats: {
-      current_streak: 57,
-      longest_streak: 57,
-      active_days_total: 89,
-      today_count: 11,
-      this_week_count: 483,
-      total: 3418,
-      today_hours: 1,
-      this_week_hours: 69,
-      total_hours: 654,
-    },
-    hm: {
-      this_week: [[1, 63, 2, 11, 2, 3, 11], [2, 30, 10, 17, 2, 5, 0], [5, 6, 7, 5, 1, 0, 0], [19, 0, 9, 2, 1, 0, 0], [7, 0, 9, 2, 5, 0, 0], [0, 0, 2, 0, 3, 0, 0], [0, 0, 0, 0, 4, 0, 0], [0, 0, 6, 0, 4, 0, 0], [0, 0, 0, 2, 3, 0, 0], [0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 3, 0, 0, 0, 0], [5, 5, 5, 0, 0, 4, 0], [7, 3, 0, 0, 0, 0, 0], [4, 0, 0, 0, 0, 0, 0], [9, 9, 0, 0, 2, 0, 0], [7, 9, 0, 0, 4, 0, 0], [2, 2, 5, 0, 2, 6, 0], [13, 3, 0, 0, 0, 9, 0], [0, 31, 3, 0, 0, 9, 0], [0, 9, 0, 0, 0, 15, 0], [0, 15, 0, 0, 0, 7, 0], [0, 4, 2, 0, 0, 3, 0], [0, 0, 1, 0, 2, 2, 0]],
-      last_week: [[3, 1, 21, 4, 2, 0, 2], [7, 1, 11, 0, 0, 0, 6], [6, 0, 1, 3, 2, 0, 10], [0, 0, 1, 10, 0, 2, 3], [0, 0, 0, 7, 0, 2, 0], [0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0], [0, 0, 5, 0, 6, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 2, 0, 0, 6, 0, 0], [0, 0, 0, 2, 0, 0, 0], [0, 4, 0, 0, 0, 5, 0], [0, 0, 0, 2, 0, 4, 7], [0, 3, 0, 5, 0, 4, 1], [2, 3, 0, 2, 0, 12, 0], [1, 8, 9, 11, 0, 11, 10], [7, 17, 31, 2, 0, 3, 2], [0, 0, 8, 0, 0, 0, 4], [0, 0, 13, 0, 0, 0, 1], [0, 6, 9, 0, 0, 1, 0]],
-      all_time:  [[30, 91, 52, 30, 40, 18, 38], [29, 73, 39, 17, 13, 16, 30], [50, 59, 20, 10, 6, 30, 29], [21, 26, 12, 12, 2, 30, 39], [13, 5, 16, 10, 16, 26, 30], [18, 0, 5, 6, 3, 4, 4], [1, 0, 4, 15, 5, 0, 1], [0, 1, 19, 17, 7, 0, 1], [0, 2, 0, 10, 12, 0, 0], [0, 5, 21, 9, 7, 3, 10], [1, 5, 62, 9, 31, 2, 17], [11, 4, 15, 23, 31, 27, 3], [23, 14, 15, 20, 24, 14, 2], [18, 15, 15, 15, 14, 18, 36], [26, 11, 9, 18, 23, 11, 32], [31, 18, 5, 21, 25, 9, 14], [26, 22, 16, 24, 36, 25, 31], [30, 20, 23, 16, 30, 20, 23], [29, 31, 0, 16, 17, 44, 17], [6, 49, 14, 18, 15, 67, 15], [21, 34, 61, 14, 27, 74, 10], [19, 33, 16, 10, 21, 30, 13], [24, 23, 20, 63, 23, 47, 23], [18, 28, 29, 55, 26, 39, 32]],
-    },
-    weekday_hours: {
-      this_week: [12, 13, 13, 7, 13, 10, 1],
-      last_week: [6, 9, 11, 12, 4, 10, 10],
-      all_time:  [94, 98, 79, 94, 91, 101, 97],
+      current_streak: 60,
+      longest_streak: 60,
+      active_days_total: 93,
+      today_count: 2,
+      this_week_count: 148,
+      total: 3716,
     },
     title: "コミット活動（2026年03月15日 〜 今日）",
     legend: "最濃 = 20件以上（通常稼働ライン・全活動日の約54%）",
@@ -494,33 +333,18 @@
       total_lbl: "総コミット数（全期間）",
       active_lbl: "活動日数（全期間）",
     },
-    hmTitle: "曜日別コミット活動時間",
-    hmHeatTitle: "時間帯別コミット分布",
   };
 
   
   const PROMPT_DATA = {
-    cells: [{"empty": true, "date": "2026-03-15", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-16", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-17", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-18", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-19", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-20", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-21", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-22", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-23", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-24", "count": 14, "level": 1}, {"empty": false, "date": "2026-03-25", "count": 20, "level": 1}, {"empty": false, "date": "2026-03-26", "count": 95, "level": 2}, {"empty": false, "date": "2026-03-27", "count": 31, "level": 1}, {"empty": false, "date": "2026-03-28", "count": 193, "level": 3}, {"empty": false, "date": "2026-03-29", "count": 311, "level": 4}, {"empty": false, "date": "2026-03-30", "count": 115, "level": 2}, {"empty": false, "date": "2026-03-31", "count": 202, "level": 3}, {"empty": false, "date": "2026-04-01", "count": 102, "level": 2}, {"empty": false, "date": "2026-04-02", "count": 141, "level": 2}, {"empty": false, "date": "2026-04-03", "count": 231, "level": 3}, {"empty": false, "date": "2026-04-04", "count": 645, "level": 4}, {"empty": false, "date": "2026-04-05", "count": 358, "level": 4}, {"empty": false, "date": "2026-04-06", "count": 168, "level": 3}, {"empty": false, "date": "2026-04-07", "count": 175, "level": 3}, {"empty": false, "date": "2026-04-08", "count": 137, "level": 2}, {"empty": false, "date": "2026-04-09", "count": 151, "level": 3}, {"empty": false, "date": "2026-04-10", "count": 169, "level": 3}, {"empty": false, "date": "2026-04-11", "count": 346, "level": 4}, {"empty": false, "date": "2026-04-12", "count": 311, "level": 4}, {"empty": false, "date": "2026-04-13", "count": 174, "level": 3}, {"empty": false, "date": "2026-04-14", "count": 298, "level": 4}, {"empty": false, "date": "2026-04-15", "count": 126, "level": 2}, {"empty": false, "date": "2026-04-16", "count": 144, "level": 2}, {"empty": false, "date": "2026-04-17", "count": 50, "level": 2}, {"empty": false, "date": "2026-04-18", "count": 212, "level": 3}, {"empty": false, "date": "2026-04-19", "count": 74, "level": 2}, {"empty": false, "date": "2026-04-20", "count": 130, "level": 2}, {"empty": false, "date": "2026-04-21", "count": 114, "level": 2}, {"empty": false, "date": "2026-04-22", "count": 149, "level": 2}, {"empty": false, "date": "2026-04-23", "count": 36, "level": 1}, {"empty": false, "date": "2026-04-24", "count": 39, "level": 1}, {"empty": false, "date": "2026-04-25", "count": 202, "level": 3}, {"empty": false, "date": "2026-04-26", "count": 334, "level": 4}, {"empty": false, "date": "2026-04-27", "count": 319, "level": 4}, {"empty": false, "date": "2026-04-28", "count": 197, "level": 3}, {"empty": false, "date": "2026-04-29", "count": 187, "level": 3}, {"empty": false, "date": "2026-04-30", "count": 524, "level": 4}, {"empty": false, "date": "2026-05-01", "count": 207, "level": 3}, {"empty": false, "date": "2026-05-02", "count": 336, "level": 4}, {"empty": false, "date": "2026-05-03", "count": 212, "level": 3}, {"empty": false, "date": "2026-05-04", "count": 319, "level": 4}, {"empty": false, "date": "2026-05-05", "count": 173, "level": 3}, {"empty": false, "date": "2026-05-06", "count": 88, "level": 2}, {"empty": false, "date": "2026-05-07", "count": 154, "level": 3}, {"empty": false, "date": "2026-05-08", "count": 115, "level": 2}, {"empty": false, "date": "2026-05-09", "count": 143, "level": 2}, {"empty": false, "date": "2026-05-10", "count": 338, "level": 4}, {"empty": false, "date": "2026-05-11", "count": 131, "level": 2}, {"empty": false, "date": "2026-05-12", "count": 228, "level": 3}, {"empty": false, "date": "2026-05-13", "count": 244, "level": 3}, {"empty": false, "date": "2026-05-14", "count": 307, "level": 4}, {"empty": false, "date": "2026-05-15", "count": 223, "level": 3}, {"empty": false, "date": "2026-05-16", "count": 140, "level": 2}, {"empty": false, "date": "2026-05-17", "count": 391, "level": 4}, {"empty": false, "date": "2026-05-18", "count": 216, "level": 3}, {"empty": false, "date": "2026-05-19", "count": 272, "level": 4}, {"empty": false, "date": "2026-05-20", "count": 83, "level": 2}, {"empty": false, "date": "2026-05-21", "count": 483, "level": 4}, {"empty": false, "date": "2026-05-22", "count": 321, "level": 4}, {"empty": false, "date": "2026-05-23", "count": 348, "level": 4}, {"empty": false, "date": "2026-05-24", "count": 138, "level": 2}, {"empty": false, "date": "2026-05-25", "count": 59, "level": 2}, {"empty": false, "date": "2026-05-26", "count": 84, "level": 2}, {"empty": false, "date": "2026-05-27", "count": 81, "level": 2}, {"empty": false, "date": "2026-05-28", "count": 115, "level": 2}, {"empty": false, "date": "2026-05-29", "count": 636, "level": 4}, {"empty": false, "date": "2026-05-30", "count": 532, "level": 4}, {"empty": false, "date": "2026-05-31", "count": 329, "level": 4}, {"empty": false, "date": "2026-06-01", "count": 163, "level": 3}, {"empty": false, "date": "2026-06-02", "count": 132, "level": 2}, {"empty": false, "date": "2026-06-03", "count": 312, "level": 4}, {"empty": false, "date": "2026-06-04", "count": 360, "level": 4}, {"empty": false, "date": "2026-06-05", "count": 407, "level": 4}, {"empty": false, "date": "2026-06-06", "count": 290, "level": 4}, {"empty": false, "date": "2026-06-07", "count": 200, "level": 3}, {"empty": false, "date": "2026-06-08", "count": 635, "level": 4}, {"empty": false, "date": "2026-06-09", "count": 849, "level": 4}, {"empty": false, "date": "2026-06-10", "count": 507, "level": 4}, {"empty": false, "date": "2026-06-11", "count": 293, "level": 4}, {"empty": false, "date": "2026-06-12", "count": 446, "level": 4}, {"empty": false, "date": "2026-06-13", "count": 382, "level": 4}, {"empty": false, "date": "2026-06-14", "count": 153, "level": 3}, {"empty": false, "date": "2026-06-15", "count": 454, "level": 4}, {"empty": false, "date": "2026-06-16", "count": 610, "level": 4}, {"empty": false, "date": "2026-06-17", "count": 882, "level": 4}, {"empty": false, "date": "2026-06-18", "count": 177, "level": 3}, {"empty": false, "date": "2026-06-19", "count": 338, "level": 4}, {"empty": false, "date": "2026-06-20", "count": 473, "level": 4}, {"empty": false, "date": "2026-06-21", "count": 475, "level": 4}, {"empty": false, "date": "2026-06-22", "count": 743, "level": 4}, {"empty": false, "date": "2026-06-23", "count": 692, "level": 4}, {"empty": false, "date": "2026-06-24", "count": 647, "level": 4}, {"empty": false, "date": "2026-06-25", "count": 708, "level": 4}, {"empty": false, "date": "2026-06-26", "count": 369, "level": 4}, {"empty": false, "date": "2026-06-27", "count": 30, "level": 1}],
+    cells: [{"empty": true, "date": "2026-03-15", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-16", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-17", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-18", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-19", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-20", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-21", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-22", "count": 0, "level": 0}, {"empty": true, "date": "2026-03-23", "count": 0, "level": 0}, {"empty": false, "date": "2026-03-24", "count": 14, "level": 1}, {"empty": false, "date": "2026-03-25", "count": 20, "level": 1}, {"empty": false, "date": "2026-03-26", "count": 95, "level": 2}, {"empty": false, "date": "2026-03-27", "count": 31, "level": 1}, {"empty": false, "date": "2026-03-28", "count": 193, "level": 3}, {"empty": false, "date": "2026-03-29", "count": 311, "level": 4}, {"empty": false, "date": "2026-03-30", "count": 115, "level": 2}, {"empty": false, "date": "2026-03-31", "count": 202, "level": 3}, {"empty": false, "date": "2026-04-01", "count": 102, "level": 2}, {"empty": false, "date": "2026-04-02", "count": 141, "level": 2}, {"empty": false, "date": "2026-04-03", "count": 231, "level": 3}, {"empty": false, "date": "2026-04-04", "count": 645, "level": 4}, {"empty": false, "date": "2026-04-05", "count": 358, "level": 4}, {"empty": false, "date": "2026-04-06", "count": 168, "level": 3}, {"empty": false, "date": "2026-04-07", "count": 175, "level": 3}, {"empty": false, "date": "2026-04-08", "count": 137, "level": 2}, {"empty": false, "date": "2026-04-09", "count": 151, "level": 3}, {"empty": false, "date": "2026-04-10", "count": 169, "level": 3}, {"empty": false, "date": "2026-04-11", "count": 346, "level": 4}, {"empty": false, "date": "2026-04-12", "count": 311, "level": 4}, {"empty": false, "date": "2026-04-13", "count": 174, "level": 3}, {"empty": false, "date": "2026-04-14", "count": 298, "level": 4}, {"empty": false, "date": "2026-04-15", "count": 126, "level": 2}, {"empty": false, "date": "2026-04-16", "count": 144, "level": 2}, {"empty": false, "date": "2026-04-17", "count": 50, "level": 2}, {"empty": false, "date": "2026-04-18", "count": 212, "level": 3}, {"empty": false, "date": "2026-04-19", "count": 74, "level": 2}, {"empty": false, "date": "2026-04-20", "count": 130, "level": 2}, {"empty": false, "date": "2026-04-21", "count": 114, "level": 2}, {"empty": false, "date": "2026-04-22", "count": 149, "level": 2}, {"empty": false, "date": "2026-04-23", "count": 36, "level": 1}, {"empty": false, "date": "2026-04-24", "count": 39, "level": 1}, {"empty": false, "date": "2026-04-25", "count": 202, "level": 3}, {"empty": false, "date": "2026-04-26", "count": 334, "level": 4}, {"empty": false, "date": "2026-04-27", "count": 319, "level": 4}, {"empty": false, "date": "2026-04-28", "count": 197, "level": 3}, {"empty": false, "date": "2026-04-29", "count": 187, "level": 3}, {"empty": false, "date": "2026-04-30", "count": 524, "level": 4}, {"empty": false, "date": "2026-05-01", "count": 207, "level": 3}, {"empty": false, "date": "2026-05-02", "count": 336, "level": 4}, {"empty": false, "date": "2026-05-03", "count": 212, "level": 3}, {"empty": false, "date": "2026-05-04", "count": 319, "level": 4}, {"empty": false, "date": "2026-05-05", "count": 173, "level": 3}, {"empty": false, "date": "2026-05-06", "count": 88, "level": 2}, {"empty": false, "date": "2026-05-07", "count": 154, "level": 3}, {"empty": false, "date": "2026-05-08", "count": 115, "level": 2}, {"empty": false, "date": "2026-05-09", "count": 143, "level": 2}, {"empty": false, "date": "2026-05-10", "count": 338, "level": 4}, {"empty": false, "date": "2026-05-11", "count": 131, "level": 2}, {"empty": false, "date": "2026-05-12", "count": 228, "level": 3}, {"empty": false, "date": "2026-05-13", "count": 244, "level": 3}, {"empty": false, "date": "2026-05-14", "count": 307, "level": 4}, {"empty": false, "date": "2026-05-15", "count": 223, "level": 3}, {"empty": false, "date": "2026-05-16", "count": 140, "level": 2}, {"empty": false, "date": "2026-05-17", "count": 391, "level": 4}, {"empty": false, "date": "2026-05-18", "count": 216, "level": 3}, {"empty": false, "date": "2026-05-19", "count": 272, "level": 4}, {"empty": false, "date": "2026-05-20", "count": 83, "level": 2}, {"empty": false, "date": "2026-05-21", "count": 483, "level": 4}, {"empty": false, "date": "2026-05-22", "count": 321, "level": 4}, {"empty": false, "date": "2026-05-23", "count": 348, "level": 4}, {"empty": false, "date": "2026-05-24", "count": 138, "level": 2}, {"empty": false, "date": "2026-05-25", "count": 59, "level": 2}, {"empty": false, "date": "2026-05-26", "count": 84, "level": 2}, {"empty": false, "date": "2026-05-27", "count": 81, "level": 2}, {"empty": false, "date": "2026-05-28", "count": 115, "level": 2}, {"empty": false, "date": "2026-05-29", "count": 636, "level": 4}, {"empty": false, "date": "2026-05-30", "count": 532, "level": 4}, {"empty": false, "date": "2026-05-31", "count": 329, "level": 4}, {"empty": false, "date": "2026-06-01", "count": 163, "level": 3}, {"empty": false, "date": "2026-06-02", "count": 132, "level": 2}, {"empty": false, "date": "2026-06-03", "count": 312, "level": 4}, {"empty": false, "date": "2026-06-04", "count": 360, "level": 4}, {"empty": false, "date": "2026-06-05", "count": 407, "level": 4}, {"empty": false, "date": "2026-06-06", "count": 290, "level": 4}, {"empty": false, "date": "2026-06-07", "count": 200, "level": 3}, {"empty": false, "date": "2026-06-08", "count": 635, "level": 4}, {"empty": false, "date": "2026-06-09", "count": 849, "level": 4}, {"empty": false, "date": "2026-06-10", "count": 507, "level": 4}, {"empty": false, "date": "2026-06-11", "count": 293, "level": 4}, {"empty": false, "date": "2026-06-12", "count": 446, "level": 4}, {"empty": false, "date": "2026-06-13", "count": 382, "level": 4}, {"empty": false, "date": "2026-06-14", "count": 153, "level": 3}, {"empty": false, "date": "2026-06-15", "count": 454, "level": 4}, {"empty": false, "date": "2026-06-16", "count": 610, "level": 4}, {"empty": false, "date": "2026-06-17", "count": 882, "level": 4}, {"empty": false, "date": "2026-06-18", "count": 177, "level": 3}, {"empty": false, "date": "2026-06-19", "count": 338, "level": 4}, {"empty": false, "date": "2026-06-20", "count": 473, "level": 4}, {"empty": false, "date": "2026-06-21", "count": 475, "level": 4}, {"empty": false, "date": "2026-06-22", "count": 743, "level": 4}, {"empty": false, "date": "2026-06-23", "count": 692, "level": 4}, {"empty": false, "date": "2026-06-24", "count": 647, "level": 4}, {"empty": false, "date": "2026-06-25", "count": 708, "level": 4}, {"empty": false, "date": "2026-06-26", "count": 369, "level": 4}, {"empty": false, "date": "2026-06-27", "count": 558, "level": 4}, {"empty": false, "date": "2026-06-28", "count": 581, "level": 4}, {"empty": false, "date": "2026-06-29", "count": 570, "level": 4}, {"empty": false, "date": "2026-06-30", "count": 79, "level": 2}],
     stats: {
-      current_streak: 96,
-      longest_streak: 96,
-      active_days_total: 96,
-      today_count: 30,
-      this_week_count: 3664,
-      total: 26397,
-      today_hours: 1,
-      this_week_hours: 90,
-      total_hours: 1152,
-    },
-    hm: {
-      this_week: [[15, 52, 33, 106, 107, 79, 30], [59, 74, 43, 101, 81, 31, 0], [55, 56, 75, 51, 61, 0, 0], [51, 7, 83, 123, 20, 0, 0], [0, 0, 59, 80, 31, 0, 0], [0, 0, 46, 19, 10, 0, 0], [0, 0, 0, 0, 27, 0, 0], [0, 0, 0, 0, 26, 0, 0], [0, 0, 0, 52, 25, 0, 0], [0, 0, 0, 16, 28, 0, 0], [0, 0, 0, 0, 0, 0, 0], [6, 0, 18, 0, 0, 0, 0], [63, 73, 5, 0, 0, 9, 0], [56, 32, 0, 0, 0, 1, 0], [15, 26, 0, 6, 0, 0, 0], [29, 69, 0, 4, 33, 0, 0], [33, 59, 1, 0, 67, 15, 0], [6, 45, 56, 0, 12, 33, 0], [52, 24, 0, 0, 0, 56, 0], [22, 48, 27, 0, 9, 34, 0], [0, 51, 23, 37, 6, 34, 0], [0, 82, 50, 16, 61, 24, 0], [0, 37, 74, 6, 62, 28, 0], [13, 8, 99, 30, 42, 25, 0]],
-      last_week: [[24, 5, 54, 86, 55, 0, 35], [47, 2, 5, 72, 7, 0, 37], [22, 0, 18, 54, 21, 0, 33], [0, 0, 44, 132, 0, 0, 28], [0, 0, 0, 100, 0, 3, 39], [0, 0, 0, 0, 0, 65, 0], [0, 0, 0, 0, 0, 1, 0], [0, 0, 6, 0, 0, 0, 0], [0, 3, 0, 51, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 4, 7, 0, 0, 0], [2, 0, 45, 42, 35, 0, 1], [0, 0, 25, 0, 0, 0, 0], [0, 6, 0, 0, 17, 0, 0], [0, 11, 0, 0, 0, 0, 0], [0, 59, 0, 0, 0, 71, 15], [0, 43, 8, 17, 0, 22, 38], [0, 31, 26, 64, 0, 20, 16], [19, 12, 20, 45, 0, 44, 32], [10, 63, 64, 81, 0, 46, 39], [28, 51, 79, 55, 0, 36, 60], [1, 55, 74, 38, 4, 1, 51], [0, 62, 79, 2, 30, 0, 34], [0, 51, 59, 36, 8, 29, 15]],
-      all_time:  [[193, 290, 419, 331, 480, 291, 290], [226, 221, 345, 229, 171, 355, 282], [187, 174, 240, 148, 130, 145, 250], [105, 56, 161, 257, 51, 83, 254], [71, 17, 92, 184, 152, 115, 153], [32, 5, 84, 25, 70, 66, 53], [2, 4, 21, 18, 57, 1, 69], [1, 3, 21, 34, 52, 4, 97], [5, 41, 11, 153, 92, 13, 56], [16, 4, 46, 44, 76, 30, 85], [71, 35, 100, 37, 27, 43, 155], [142, 35, 258, 127, 83, 128, 91], [264, 137, 187, 137, 62, 89, 66], [182, 104, 59, 155, 100, 98, 246], [276, 81, 102, 83, 81, 28, 248], [231, 251, 59, 78, 117, 82, 171], [230, 221, 159, 81, 149, 103, 146], [176, 192, 162, 150, 84, 126, 189], [202, 239, 86, 162, 154, 244, 251], [147, 325, 164, 158, 259, 308, 158], [160, 218, 231, 257, 202, 320, 205], [178, 290, 264, 176, 374, 202, 208], [283, 313, 384, 225, 389, 309, 301], [244, 370, 385, 316, 276, 399, 248]],
-    },
-    weekday_hours: {
-      this_week: [14, 16, 15, 14, 18, 12, 1],
-      last_week: [8, 14, 16, 16, 8, 11, 15],
-      all_time:  [182, 157, 170, 141, 155, 156, 191],
+      current_streak: 99,
+      longest_streak: 99,
+      active_days_total: 99,
+      today_count: 79,
+      this_week_count: 1230,
+      total: 28155,
     },
     title: "プロンプト活動（2026年03月24日 〜 今日）",
     legend: "最濃 = 250件以上（高稼働ライン・活動日の約35%）",
@@ -530,16 +354,10 @@
       total_lbl: "総プロンプト数（追跡）",
       active_lbl: "活動日数（追跡期間）",
     },
-    hmTitle: "曜日別プロンプト活動時間",
-    hmHeatTitle: "時間帯別プロンプト分布",
   };
   
 
   let currentView = "prompt";
-  let currentHmMode = 'this_week';
-  let currentMetric = 'count';
-  let currentChartType = 'heatmap';
-  let currentHeatmapAxis = 'vertical';
 
   // ── ツールチップヘルパー ──
   function addTooltipEvents(el, getText) {
@@ -613,37 +431,17 @@
   function updateCards(data) {
     const s = data.stats;
     const c = data.cards;
-    const isHours = (currentMetric === 'hours');
     document.getElementById('stat-streak-current').textContent = s.current_streak;
     document.getElementById('stat-streak-longest').textContent = s.longest_streak;
     document.getElementById('stat-active-days').textContent = s.active_days_total;
     document.getElementById('stat-active-days-lbl').textContent = c.active_lbl;
-    if (isHours) {
-      document.getElementById('stat-today').textContent = (s.today_hours || 0).toLocaleString();
-      document.getElementById('stat-today-lbl').textContent = '今日の活動時間（h）';
-      document.getElementById('stat-this-week').textContent = (s.this_week_hours || 0).toLocaleString();
-      document.getElementById('stat-this-week-lbl').textContent = '今週の活動時間（h）';
-      document.getElementById('stat-total').textContent = (s.total_hours || 0).toLocaleString();
-      document.getElementById('stat-total-lbl').textContent = '総活動時間（h）';
-    } else {
-      document.getElementById('stat-today').textContent = s.today_count.toLocaleString();
-      document.getElementById('stat-today-lbl').textContent = c.today_lbl;
-      document.getElementById('stat-this-week').textContent = s.this_week_count.toLocaleString();
-      document.getElementById('stat-this-week-lbl').textContent = c.week_lbl;
-      document.getElementById('stat-total').textContent = s.total.toLocaleString();
-      document.getElementById('stat-total-lbl').textContent = c.total_lbl;
-    }
+    document.getElementById('stat-today').textContent = s.today_count.toLocaleString();
+    document.getElementById('stat-today-lbl').textContent = c.today_lbl;
+    document.getElementById('stat-this-week').textContent = s.this_week_count.toLocaleString();
+    document.getElementById('stat-this-week-lbl').textContent = c.week_lbl;
+    document.getElementById('stat-total').textContent = s.total.toLocaleString();
+    document.getElementById('stat-total-lbl').textContent = c.total_lbl;
   }
-
-  // ── メトリクス切り替え（件数 ↔ 活動時間） ──
-  window.switchMetric = function(metric) {
-    currentMetric = metric;
-    document.querySelectorAll('.metric-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.metric === metric);
-    });
-    const data = (currentView === 'prompt' && PROMPT_DATA) ? PROMPT_DATA : COMMIT_DATA;
-    updateCards(data);
-  };
 
   // ── ビュー切り替え ──
   window.switchView = function(viewName) {
@@ -653,204 +451,10 @@
     updateCards(data);
     document.getElementById('grass-title').textContent = data.title;
     document.getElementById('legend-label').textContent = data.legend;
-    renderCurrentChart(currentHmMode);
     document.querySelectorAll('.view-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.view === viewName);
     });
   };
-
-  // ── チャート共通 ──
-  const WD_LABELS = ['日', '月', '火', '水', '木', '金', '土'];
-  const HM_MODES = ['this_week', 'last_week', 'all_time'];
-  const HM_PERIOD_LABELS = { this_week: '今週', last_week: '先週', all_time: '全期間' };
-
-  function hmColor(count, max) {
-    if (!count || !max) return '#161b22';
-    const r = count / max;
-    if (r < 0.25) return '#0e4429';
-    if (r < 0.5)  return '#006d32';
-    if (r < 0.75) return '#26a641';
-    return '#39d353';
-  }
-
-  // ── 時間帯ヒートマップ 縦軸（git元実装: 時間=行・曜日=列, 長方形セル）──
-  function renderHeatmapVertical(mode) {
-    const data = (currentView === 'prompt' && PROMPT_DATA) ? PROMPT_DATA : COMMIT_DATA;
-    const matrix = data.hm[mode];
-    const wdHours = data.weekday_hours[mode];
-    const maxCount = Math.max(...matrix.flat(), 1);
-    const grid = document.getElementById('heatmap-grid');
-    grid.innerHTML = '';
-    grid.className = 'mode-vertical';
-
-    const add = (cls, text) => {
-      const el = document.createElement('div');
-      el.className = cls;
-      if (text !== undefined) el.textContent = text;
-      grid.appendChild(el);
-      return el;
-    };
-
-    // ヘッダ行: 空 + 曜日ラベル
-    add('hm-header', '');
-    WD_LABELS.forEach(wd => add('hm-header', wd));
-
-    // 24時間行
-    for (let h = 0; h < 24; h++) {
-      add('hm-hour-label', String(h).padStart(2, '0'));
-      for (let wd = 0; wd < 7; wd++) {
-        const count = (matrix[h] && matrix[h][wd]) || 0;
-        const cell = add('hm-cell', '');
-        cell.style.background = hmColor(count, maxCount);
-        const _wd = wd, _h = h;
-        addTooltipEvents(cell, () => `${WD_LABELS[_wd]} ${_h}時: ${(matrix[_h] && matrix[_h][_wd] || 0).toLocaleString()}件`);
-      }
-    }
-
-    // フッタ行: 曜日別活動時間
-    add('hm-hour-label', '');
-    WD_LABELS.forEach((wd, i) => {
-      const hrs = wdHours[i] || 0;
-      const el = add('hm-wd-hours', hrs + 'h');
-      addTooltipEvents(el, () => `${wd}曜日: 計${hrs}時間`);
-    });
-
-    const periodLabel = HM_PERIOD_LABELS[mode] || mode;
-    document.getElementById('hm-title').textContent =
-      `${data.hmHeatTitle}（${periodLabel}）`;
-  }
-
-  // ── 時間帯ヒートマップ 横軸（曜日=行・時間=列, 正方形セル）──
-  function renderHeatmapHorizontal(mode) {
-    const data = (currentView === 'prompt' && PROMPT_DATA) ? PROMPT_DATA : COMMIT_DATA;
-    const matrix = data.hm[mode];
-    const wdHours = data.weekday_hours[mode];
-    const maxCount = Math.max(...matrix.flat(), 1);
-    const grid = document.getElementById('heatmap-grid');
-    grid.innerHTML = '';
-    grid.className = '';
-
-    // 時間ヘッダー
-    const header = document.createElement('div');
-    header.className = 'hm-header-row';
-    const spacer = document.createElement('span');
-    spacer.className = 'hm-row-label';
-    header.appendChild(spacer);
-    for (let h = 0; h < 24; h++) {
-      const s = document.createElement('span');
-      s.className = 'hm-col-label';
-      s.textContent = (h % 6 === 0) ? h + '時' : '';
-      header.appendChild(s);
-    }
-    const hdrHrs = document.createElement('span');
-    hdrHrs.className = 'hm-wd-hours-right';
-    hdrHrs.textContent = '時間';
-    header.appendChild(hdrHrs);
-    grid.appendChild(header);
-
-    // 曜日行 × 時間列
-    for (let wd = 0; wd < 7; wd++) {
-      const row = document.createElement('div');
-      row.className = 'hm-row';
-      const lbl = document.createElement('span');
-      lbl.className = 'hm-row-label';
-      lbl.textContent = WD_LABELS[wd];
-      row.appendChild(lbl);
-      for (let h = 0; h < 24; h++) {
-        const count = (matrix[h] && matrix[h][wd]) || 0;
-        const cell = document.createElement('span');
-        cell.className = 'hm-cell';
-        cell.style.background = hmColor(count, maxCount);
-        const _wd = wd, _h = h;
-        addTooltipEvents(cell, () => `${WD_LABELS[_wd]} ${_h}時: ${(matrix[_h] && matrix[_h][_wd] || 0).toLocaleString()}件`);
-        row.appendChild(cell);
-      }
-      // 曜日別活動時間
-      const hoursEl = document.createElement('span');
-      hoursEl.className = 'hm-wd-hours-right';
-      hoursEl.textContent = (wdHours[wd] || 0) + 'h';
-      row.appendChild(hoursEl);
-      grid.appendChild(row);
-    }
-
-    const periodLabel = HM_PERIOD_LABELS[mode] || mode;
-    document.getElementById('hm-title').textContent =
-      `${data.hmHeatTitle}（${periodLabel}）`;
-  }
-
-  function renderHeatmap(mode) {
-    if (currentHeatmapAxis === 'vertical') renderHeatmapVertical(mode);
-    else renderHeatmapHorizontal(mode);
-  }
-
-  // ── 曜日別活動時間バーチャート ──
-  function renderWeekdayBars(mode) {
-    const data = (currentView === 'prompt' && PROMPT_DATA) ? PROMPT_DATA : COMMIT_DATA;
-    const wdHours = data.weekday_hours[mode];
-    const maxHours = Math.max(...wdHours, 1);
-    const grid = document.getElementById('heatmap-grid');
-    grid.innerHTML = '';
-    grid.className = 'mode-bars';
-
-    WD_LABELS.forEach((wd, i) => {
-      const h = wdHours[i] || 0;
-      const pct = Math.round(h / maxHours * 100);
-      const row = document.createElement('div');
-      row.className = 'wd-bar-row';
-      row.innerHTML =
-        `<span class="wd-bar-label">${wd}</span>` +
-        `<div class="wd-bar-track"><div class="wd-bar-fill" style="width:${pct}%"></div></div>` +
-        `<span class="wd-bar-val">${h}h</span>`;
-      grid.appendChild(row);
-    });
-
-    const periodLabel = HM_PERIOD_LABELS[mode] || mode;
-    document.getElementById('hm-title').textContent =
-      `${data.hmTitle}（${periodLabel}）`;
-  }
-
-  function renderCurrentChart(mode) {
-    if (currentChartType === 'heatmap') renderHeatmap(mode);
-    else renderWeekdayBars(mode);
-  }
-
-  window.switchChartType = function(chartType) {
-    currentChartType = chartType;
-    document.querySelectorAll('.hm-chart-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.chart === chartType);
-    });
-    // 軸切替は時間帯ヒートマップのみ表示
-    const axisWrap = document.getElementById('hm-axis-wrap');
-    if (axisWrap) axisWrap.classList.toggle('visible', chartType === 'heatmap');
-    renderCurrentChart(currentHmMode);
-  };
-
-  window.switchHeatmapAxis = function(axis) {
-    currentHeatmapAxis = axis;
-    document.querySelectorAll('.hm-axis-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.axis === axis);
-    });
-    renderHeatmap(currentHmMode);
-  };
-
-  window.switchHeatmap = function(mode) {
-    currentHmMode = mode;
-    document.querySelectorAll('.hm-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.mode === mode);
-    });
-    renderCurrentChart(mode);
-  };
-
-  // キーボードナビ
-  document.addEventListener('keydown', e => {
-    if (document.activeElement.tagName === 'INPUT' ||
-        document.activeElement.tagName === 'TEXTAREA') return;
-    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-    e.preventDefault();
-    const idx = HM_MODES.indexOf(currentHmMode);
-    if (e.key === 'ArrowLeft' && idx > 0) switchHeatmap(HM_MODES[idx - 1]);
-    if (e.key === 'ArrowRight' && idx < HM_MODES.length - 1) switchHeatmap(HM_MODES[idx + 1]);
-  });
 
   // ── 今すぐ更新 ──
   window.runUpdate = async function() {
