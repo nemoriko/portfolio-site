@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>安全優先のファイル整理・データ復旧 — AI Agent Portfolio</title>
+  <meta name="description" content="速さより『元に戻せること・壊さないこと』を最優先したツール群。承認・シミュレーション・復元を分離。">
+  <link rel="stylesheet" href="../assets/css/style-vf.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">ai-agent-portfolio</a>
+      <ul class="nav-links"><li><a href="../index.html#projects">← projects</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+      <div><span class="status-badge is-dev">開発中</span></div>
+      <span class="eyebrow">upper · safe file ops</span>
+      <h1>安全優先のファイル整理・データ復旧</h1>
+      <p class="detail-hero-lead">速さより『元に戻せること・壊さないこと』を最優先したツール群。</p>
+    </div>
+  </header>
+
+  <main class="detail-body">
+    <div class="container">
+
+      <section class="detail-block reveal">
+        <h2>概要</h2>
+        <p>AIの自動化能力より、承認境界・停止条件・復元性を設計できることを示す事例です。セキュリティ・証拠保全・慎重な業務自動化で強く使えます。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>課題</h2>
+        <p>AIに整理や復旧を任せると、速さ優先で誤削除・元データ破壊が起きやすくなります。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>解決 — 危険な一括削除 vs 5段階の安全ワークフロー</h2>
+        <p>整理は scan / simulate / apply / restore の段階を分け、復旧は「修復より先にイメージ」「元媒体へ書き込まない」を固定原則にします。承認境界を挟み、対象外への移動は拒否、衝突時は停止します。</p>
+        <figure class="detail-figure">
+          <svg viewBox="0 0 860 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="危険な一括削除と、scanからsimulate、approve、apply、restoreへ至る5段階の安全ワークフローを比較した図">
+            <defs>
+              <marker id="sf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#5ef2c4"/>
+              </marker>
+              <marker id="sf-arrow-danger" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#ff6b6b"/>
+              </marker>
+            </defs>
+            <rect width="860" height="250" fill="#0d1320"/>
+            <!-- Danger row -->
+            <g font-family="'JetBrains Mono',monospace">
+              <text x="40" y="52" font-size="13" font-weight="800" fill="#ff6b6b" text-anchor="start">DANGER — 一括削除</text>
+            </g>
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle" font-size="12" font-weight="700" fill="#ff9d9d">
+              <g><rect x="40" y="66" width="180" height="44" rx="10" fill="#2a1518" stroke="#ff6b6b"/><text x="130" y="92">Bulk delete</text></g>
+            </g>
+            <g stroke="#ff6b6b" stroke-width="2.5" fill="none" marker-end="url(#sf-arrow-danger)"><path d="M220 88 L286 88"/></g>
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle" font-size="12" font-weight="800" fill="#ff6b6b">
+              <text x="360" y="92">Data lost（復元不能）</text>
+            </g>
+            <!-- divider -->
+            <line x1="40" y1="132" x2="820" y2="132" stroke="#2a3444" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <!-- Safe workflow row -->
+            <g font-family="'JetBrains Mono',monospace">
+              <text x="40" y="164" font-size="13" font-weight="800" fill="#5ef2c4" text-anchor="start">SAFE — 5-stage workflow</text>
+            </g>
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle" font-size="11.5" font-weight="700" fill="#e6edf6">
+              <g><rect x="30"  y="180" width="140" height="44" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="100" y="207">scan</text></g>
+              <g><rect x="196" y="180" width="140" height="44" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="266" y="207">simulate</text></g>
+              <g><rect x="362" y="180" width="140" height="44" rx="10" fill="#2a2114" stroke="#e0973a"/><text x="432" y="207" fill="#f2b56a">approve</text></g>
+              <g><rect x="528" y="180" width="140" height="44" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="598" y="207">apply</text></g>
+              <g><rect x="694" y="180" width="140" height="44" rx="10" fill="#12303a" stroke="#5ef2c4"/><text x="764" y="207" fill="#5ef2c4">restore</text></g>
+            </g>
+            <g stroke="#5ef2c4" stroke-width="2.5" fill="none" marker-end="url(#sf-arrow)">
+              <path d="M170 202 L192 202"/><path d="M336 202 L358 202"/>
+              <path d="M502 202 L524 202"/><path d="M668 202 L690 202"/>
+            </g>
+          </svg>
+          <figcaption class="figure-caption">上：一括削除は一度実行すると復元できない。下：scan → simulate → approve → apply → restore の5段階に分け、承認境界とソフトデリート・MANIFESTで元に戻せる状態を保つ。</figcaption>
+        </figure>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>主な機能・成果</h2>
+        <ul>
+          <li>JSON正本と人間向けMarkdownを分け、対象フォルダ外への移動拒否・衝突時停止・ソフトデリート・MANIFESTによる復元を実装。</li>
+          <li>復旧は読み取り専用診断 → イメージ化 → 複製解析の順。ドライブ番号だけを信用しない。</li>
+          <li>機密辞書・媒体シリアル・生ログ・復旧ファイル一覧をGit履歴から分離。</li>
+        </ul>
+      </section>
+
+      <section class="detail-block safety reveal">
+        <h2>失敗時にどう安全側へ倒したか</h2>
+        <p>復旧の成功を保証する表現は避けます。成果は復旧件数ではなく、安全な切り分けと保全手順として示します。元媒体へは書き込まず、先にイメージを保全して複製側だけを解析します。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>技術スタック</h2>
+        <div class="stack-list">
+          <span class="tag">Python</span><span class="tag">CLI</span>
+        </div>
+      </section>
+
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+    </div>
+  </main>
+
+  <script src="../../assets/js/scroll.js"></script>
+</body>
+</html>

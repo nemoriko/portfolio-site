@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AI Agent Portfolio — AIが安全に働き続ける環境を設計する</title>
+  <meta name="description" content="AIエージェントの運用ハーネスを自作し、その上で営業・音声・EC・在庫管理などの実業務を自動化。営業現場×AI実装の個人ポートフォリオ（v3）。">
+  <meta property="og:title" content="AI Agent Portfolio">
+  <meta property="og:description" content="AIを使うだけでなく、AIが安全に働き続ける環境を設計する。">
+  <meta property="og:url" content="https://nemoriko.github.io/portfolio-site/v3/">
+  <meta property="og:image" content="https://nemoriko.github.io/portfolio-site/assets/img/v3/og-v3.webp">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">
+        <span class="nav-brand-mark"></span>
+        AI Agent Portfolio
+      </span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img class="hero-bg-image" src="../assets/img/hero.webp" alt="" onerror="this.remove()">
+    </div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <span class="hero-badge">AI Agent / Sales × Implementation</span>
+        <h1 class="hero-title">
+          AIを使うだけでなく、<br>
+          <span class="hl">AIが安全に働き続ける環境を設計する</span>
+        </h1>
+        <p class="hero-sub">
+          Claude Code と Codex の共通ルール・長期記憶・危険操作ガード・無人実行・別AIレビュー・複数PC同期までを自作。<br>
+          その基盤の上で、営業・音声・EC・在庫管理などの実業務を端から端まで自動化しています。
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">50<span class="suffix">+</span></span>
+            <span class="stat-label">自作AIスキル</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">15<span class="suffix">+</span></span>
+            <span class="stat-label">自動フック</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">688<span class="suffix">件</span></span>
+            <span class="stat-label">音声処理 累計</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-side reveal">
+          <span class="section-eyebrow">About</span>
+          <p class="about-mission">
+            AIを<span>万能視せず</span>、<br>
+            業務の現場感と、エージェント実装力を<br>
+            <span>橋渡しする</span>立場として。
+          </p>
+          <div class="about-callout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+            <span>営業 × AI実装をつなぐ翻訳者</span>
+          </div>
+          <div class="about-visual">
+            <img src="../assets/img/about.webp" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">
+          </div>
+        </div>
+
+        <div class="about-body reveal">
+          <p>
+            現職では営業部でWebマーケティング内製化とAI活用推進に携わり、業務課題の発見からAI自動化システムの要件定義・実装・社内展開までを担っています。個人事業主としても法人営業支援会社と業務提携し、法人リード提供事業を運営しています。
+          </p>
+          <p>
+            個人環境でも、AIエージェントを安全に運用するための<strong>ハーネス（共通ルール・長期記憶・危険操作ガード・無人実行・別AIレビュー）</strong>を自作し、その上で通話記録の自動要約・複数フリマの在庫管理・営業データ運用・日記自動記録など、複数のAIシステムを並行して構築・運用中。単発のプロトタイプではなく「他者が継続利用できる状態まで届ける」ことを重視しています。
+          </p>
+          <p>
+            生成AIの弱点（情報の画一化・独自性欠如）を理解した上で人間と役割分担を設計する立場として、<strong>AIコンサル・AI活用支援職</strong>へのキャリアチェンジを目指しています。
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">Sales × AI</span>
+            <span class="about-tag">Agent Implementation</span>
+            <span class="about-tag">Production-Ready</span>
+            <span class="about-tag">DX Promotion</span>
+            <span class="about-tag">Solo Builder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Projects -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-eyebrow">Projects</span>
+        <h2 class="section-title">AIを安全に運用する基盤を作り、<br>その上で複数の実業務を自動化</h2>
+        <p class="section-lead">
+          最も独自性が高いのは、AIエージェントを安全に働かせ続ける「運用ハーネス」を自作していること。
+          その基盤の上で、営業・音声・商品登録・フリマなどの実業務を端から端まで自動化しています。
+          各カードから詳細ページへ進めます（稼働中／開発中／研究中のラベル付き）。
+        </p>
+      </div>
+
+      <figure class="reveal" style="margin:0 0 3.5rem;border:1px solid var(--c-line);border-radius:20px;overflow:hidden;box-shadow:0 12px 32px rgba(11,58,122,0.10);background:#fff;">
+        <svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="システム全体のワールドマップ。中央のAIエージェント運用ハーネスから、旗艦の営業データ運用・音声パイプライン・商品登録自動化・フリマ運用、および補助の安全ファイル操作・知識基盤・就活CRM・制作基盤・APIキー監視・Windows運用へつながる構成図。" style="width:100%;height:auto;display:block;">
+          <defs>
+            <linearGradient id="wm-core" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a47a8"/><stop offset="1" stop-color="#051f48"/></linearGradient>
+            <linearGradient id="wm-flag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d6bd2"/><stop offset="1" stop-color="#0a47a8"/></linearGradient>
+          </defs>
+          <rect width="900" height="470" fill="#f6f9fd"/>
+          <text x="450" y="34" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="15" font-weight="800" fill="#0a1530">System World Map — 自作AI運用基盤とその上の実業務</text>
+          <!-- edges -->
+          <g stroke="#b8d1f6" stroke-width="2" fill="none">
+            <path d="M450 210 L150 120"/><path d="M450 210 L360 120"/><path d="M450 210 L540 120"/><path d="M450 210 L750 120"/>
+            <path d="M450 274 L90 372"/><path d="M450 274 L237 372"/><path d="M450 274 L384 372"/><path d="M450 274 L531 372"/><path d="M450 274 L678 372"/><path d="M450 274 L825 372"/>
+          </g>
+          <!-- core -->
+          <g font-family="'Noto Sans JP',sans-serif" text-anchor="middle">
+            <rect x="330" y="208" width="240" height="70" rx="14" fill="url(#wm-core)"/>
+            <text x="450" y="238" font-size="15" font-weight="800" fill="#fff">AIエージェント運用ハーネス</text>
+            <text x="450" y="258" font-size="10.5" fill="#b8d1f6">Rules · Memory · Guard · AI Review · Notify</text>
+          </g>
+          <!-- flagship (top) -->
+          <g font-family="'Noto Sans JP',sans-serif" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">
+            <g><rect x="70"  y="92" width="160" height="52" rx="10" fill="url(#wm-flag)"/><text x="150" y="115">法人営業データ運用</text><text x="150" y="132" font-size="10" fill="#cfe0fb">収集→確認→送信→追跡</text></g>
+            <g><rect x="280" y="92" width="160" height="52" rx="10" fill="url(#wm-flag)"/><text x="360" y="115">音声パイプライン</text><text x="360" y="132" font-size="10" fill="#cfe0fb">録音→要約→検索可能に</text></g>
+            <g><rect x="460" y="92" width="160" height="52" rx="10" fill="url(#wm-flag)"/><text x="540" y="115">商品登録 一括更新</text><text x="540" y="132" font-size="10" fill="#cfe0fb">API無し画面を自動操作</text></g>
+            <g><rect x="670" y="92" width="160" height="52" rx="10" fill="url(#wm-flag)"/><text x="750" y="115">フリマ在庫・再出品</text><text x="750" y="132" font-size="10" fill="#cfe0fb">売却検知→自動取下</text></g>
+          </g>
+          <!-- support (bottom) -->
+          <g font-family="'Noto Sans JP',sans-serif" text-anchor="middle" font-size="11" font-weight="600" fill="#0a1530">
+            <g><rect x="26"  y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="90"  y="392">安全ファイル操作</text></g>
+            <g><rect x="173" y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="237" y="392">知識・リサーチ基盤</text></g>
+            <g><rect x="320" y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="384" y="392">就活CRM</text></g>
+            <g><rect x="467" y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="531" y="392">制作基盤(LP/資料)</text></g>
+            <g><rect x="614" y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="678" y="392">APIキー監視PoC</text></g>
+            <g><rect x="761" y="366" width="128" height="42" rx="9" fill="#eef4fc" stroke="#b8d1f6"/><text x="825" y="392">Windows運用基盤</text></g>
+          </g>
+          <text x="450" y="446" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="10.5" fill="#5f6b85">中央の運用ハーネスが全プロジェクトを支え、その上で旗艦の実業務（上段）と補助基盤（下段）が動く。</text>
+        </svg>
+      </figure>
+
+      <h3 class="subsection-title reveal">旗艦プロジェクト</h3>
+      <div class="card-grid reveal">
+
+        <!-- 1. agent-harness -->
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/agent-harness-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Flagship · 稼働中</span>
+            <h4 class="card-title">AIエージェント開発・運用ハーネス</h4>
+            <p class="card-desc">
+              共通ルール・危険操作ガード・長期記憶RAG・無人実行・別AIレビュー・音声通知を一体化した自作基盤。他の全プロジェクトを支える中核。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">50<span style="font-size:0.7em;">+</span></span><span class="card-meta-label">自作スキル</span></div>
+              <div class="card-meta-item"><span class="card-meta-num">15<span style="font-size:0.7em;">+</span></span><span class="card-meta-label">自動フック</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">RAG</span><span class="tag">SQLite FTS5</span>
+            </div>
+            <a href="projects/agent-harness.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 2. sales-data-platform -->
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/sales-data-platform-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Flagship · 稼働中</span>
+            <h4 class="card-title">法人営業データ運用プラットフォーム</h4>
+            <p class="card-desc">
+              営業候補を集め、使ってよいデータか確認し、CRMで判断し、承認済みだけをメール運用へ渡して、返信・バウンス・配信停止まで追跡する業務基盤。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">270,000<span style="font-size:0.7em;">+</span></span><span class="card-meta-label">収集レコード</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">スクレイピング</span><span class="tag">CRM</span><span class="tag">メール運用</span>
+            </div>
+            <a href="projects/sales-data-platform.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 3. voice-pipeline -->
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/voice-pipeline-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Flagship · 稼働中</span>
+            <h4 class="card-title">録音から検索可能な知識へ変換する音声パイプライン</h4>
+            <p class="card-desc">
+              録音を検知し、ローカルGPUで文字起こしと話者分離、AIで要約・次アクションを生成して元音声リンク付きで保存。人間の操作は「録音する」だけ。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">688<span style="font-size:0.7em;">件</span></span><span class="card-meta-label">音声処理 累計</span></div>
+              <div class="card-meta-item"><span class="card-meta-num">259<span style="font-size:0.7em;">件</span></span><span class="card-meta-label">通話 累計</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">WhisperX</span><span class="tag">PyTorch/CUDA</span><span class="tag">話者分離</span><span class="tag">Obsidian</span>
+            </div>
+            <a href="projects/voice-pipeline.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 4. product-catalog -->
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/product-catalog-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Flagship · 稼働中</span>
+            <h4 class="card-title">商品登録・カタログ一括更新自動化</h4>
+            <p class="card-desc">
+              APIもCSVもない業務SaaSに対し、ブラウザ自動操作と専用CLIで、商品名・価格・画像・HTML説明文・注意事項を一括登録・更新した自動化。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">82<span style="font-size:0.7em;">件</span></span><span class="card-meta-label">一括更新(実績)</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Playwright</span><span class="tag">CLI</span><span class="tag">業務SaaS自動化</span>
+            </div>
+            <a href="projects/product-catalog.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 5. fleamarket-ops -->
+        <article class="card card-featured">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/fleamarket-ops-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Flagship · 開発中</span>
+            <h4 class="card-title">複数フリマの在庫・再出品運用基盤</h4>
+            <p class="card-desc">
+              複数マーケットの商品・出品状態・販売履歴・業者価格を一つのSQLite基盤へまとめ、再出品・取り下げ・データ移行を自動化。実運用の例外を蓄積。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">200<span style="font-size:0.7em;">+件</span></span><span class="card-meta-label">再出品 実運用(ヤフオク中心)</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Playwright</span><span class="tag">Gmail API</span>
+            </div>
+            <a href="projects/fleamarket-ops.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 class="subsection-title reveal" style="margin-top: 4rem;">その他の実績・研究</h3>
+      <div class="card-grid reveal">
+
+        <!-- 6. safe-fileops -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/safe-fileops-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Upper · 開発中</span>
+            <h4 class="card-title">安全優先のファイル整理・データ復旧</h4>
+            <p class="card-desc">
+              速さより「元に戻せること・壊さないこと」を最優先。提案・承認・シミュレーション・本実行・復元を分け、復旧は元媒体へ書き込まず複製側だけを解析。
+            </p>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">CLI</span><span class="tag">データ保全</span><span class="tag">MANIFEST</span>
+            </div>
+            <a href="projects/safe-fileops.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 7. knowledge-base -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/knowledge-base-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Research · 研究中</span>
+            <h4 class="card-title">外部知識取り込み・リサーチ基盤</h4>
+            <p class="card-desc">
+              書籍やリサーチ結果を、OCR・要約・出典ページ・品質確認を通して、出典を失わず実務で再利用できる知識へ変換する研究基盤。
+            </p>
+            <div class="card-tags">
+              <span class="tag">Playwright</span><span class="tag">OCR</span><span class="tag">要約</span><span class="tag">出典管理</span>
+            </div>
+            <a href="projects/knowledge-base.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 8. jobhunt-crm -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/jobhunt-crm-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Mid · 稼働中</span>
+            <h4 class="card-title">就活CRM・応募運用自動化</h4>
+            <p class="card-desc">
+              求人評価・応募書類・メール通知・面接準備・応募状況を一つの案件管理として扱う個人向け業務システム。散らばる連絡を案件単位にまとめる。
+            </p>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">Gmail API</span><span class="tag">CRM</span>
+            </div>
+            <a href="projects/jobhunt-crm.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 9. creative-workspace -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/creative-workspace-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Mid · 稼働中</span>
+            <h4 class="card-title">LP・提案資料・ポートフォリオ制作基盤</h4>
+            <p class="card-desc">
+              複数AIで要件整理・コピー・設計・レビュー・差分修正・資料生成を繰り返せる制作基盤。案件ごとに同じ品質で再開できるテンプレとレビュー導線。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">9<span style="font-size:0.7em;">本</span></span><span class="card-meta-label">LP制作(実務)</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">HTML/CSS</span><span class="tag">Visual First</span><span class="tag">レビュー導線</span>
+            </div>
+            <a href="projects/creative-workspace.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 10. apikey-monitor -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/apikey-monitor-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Mid · 研究中</span>
+            <h4 class="card-title">APIキー漏洩候補の継続監視PoC</h4>
+            <p class="card-desc">
+              公開リポジトリのAPIキー漏洩候補を定期検出し、重複排除・監査レポート・ジョブ監視へつなぐPoC。生キーは保存せず人間確認前提で設計。
+            </p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span class="card-meta-num">180<span style="font-size:0.7em;">件</span></span><span class="card-meta-label">検出候補(PoC)</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">セキュリティ</span>
+            </div>
+            <a href="projects/apikey-monitor.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+        <!-- 11. windows-ops -->
+        <article class="card">
+          <div class="card-mock">
+            <img src="../assets/img/v3/groups/windows-ops-hero-1.webp" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-eyebrow">Support · 稼働中</span>
+            <h4 class="card-title">Windowsローカル運用・可観測性基盤</h4>
+            <p class="card-desc">
+              研究コードを「毎日起動し、止まったら原因が分かる仕組み」に変える周辺基盤。電源・スケジューラ・SSH・プロセス・活動統計を管理。旗艦ハーネスの裏側。
+            </p>
+            <div class="card-tags">
+              <span class="tag">Python</span><span class="tag">SSH</span><span class="tag">Windows</span><span class="tag">可視化</span>
+            </div>
+            <a href="projects/windows-ops.html" class="card-link">詳細を見る →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-eyebrow">Skills</span>
+        <h2 class="section-title">スキルマトリクス</h2>
+        <p class="section-lead">AI実装に閉じず、ビジネス側の視点や運用設計も自分で持つ。</p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h4>AI実装・自動化設計</h4>
+          <div class="skill-pills">
+            <span class="pill">Claude Code</span><span class="pill">Codex</span><span class="pill">Gemini</span><span class="pill">エージェント設計</span><span class="pill">要件定義〜本番</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h4>実装スタック</h4>
+          <div class="skill-pills">
+            <span class="pill">Python</span><span class="pill">Playwright</span><span class="pill">SQLite</span><span class="pill">Flask</span><span class="pill">Win Scheduler</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4>DX推進・組織展開</h4>
+          <div class="skill-pills">
+            <span class="pill">社内AI推進</span><span class="pill">承認獲得・交渉</span><span class="pill">講習設計</span><span class="pill">運用・引き継ぎ</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+          <h4>マーケティング・ビジネス</h4>
+          <div class="skill-pills">
+            <span class="pill">LP制作（9本）</span><span class="pill">SEO・E-E-A-T</span><span class="pill">B2B営業</span><span class="pill">競合調査</span><span class="pill">法令対応</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Timeline -->
+  <section class="section section-alt" id="timeline">
+    <div class="container">
+      <div class="reveal"><span class="section-eyebrow">Timeline</span><h2 class="section-title">経歴</h2></div>
+      <div class="timeline reveal">
+        <div class="timeline-item current">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2026年4月 〜 継続中</span>
+            <h4 class="timeline-role">代表</h4>
+            <p class="timeline-company">個人事業主（法人営業支援・リード提供事業）</p>
+            <ul class="timeline-bullets">
+              <li>契約先企業へSNS営業支援サービス（見込み客リスト収集・営業接続業務）を業務委託契約で提供</li>
+              <li>複数の公開求人・EC・SNSプラットフォームから法人リードを自動収集するスクレイパー基盤を単独設計・運用</li>
+              <li>累計270,000件超のリードデータを収集</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2026年1月 〜 4月末（正社員）／5月 〜 7月末予定（業務委託・週2日）</span>
+            <h4 class="timeline-role">営業部</h4>
+            <p class="timeline-company">モバイル通信系企業</p>
+            <ul class="timeline-bullets">
+              <li>法人営業自動化システムの設計・構築（問い合わせフォーム・メール送信の自動化）</li>
+              <li>Webマーケティング内製化（LP9本・チラシ1,000枚）</li>
+              <li>社内AI推進：Claude Code専用Sandbox環境を情報システム部門へ提案・承認取得</li>
+              <li>AI講習の企画・設計・講師役同僚への個別指導</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2020年4月 〜 2025年12月</span>
+            <h4 class="timeline-role">自営業のかたわら自動化技術を独学</h4>
+            <p class="timeline-company">個人（自己研鑽）</p>
+            <ul class="timeline-bullets">
+              <li>UWSC×Android仮想環境（ADB制御）でのマクロ開発から着手</li>
+              <li>Python、Playwrightへと発展させ、業務自動化の基盤を構築</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">2012年 〜 2020年</span>
+            <h4 class="timeline-role">代表</h4>
+            <p class="timeline-company">個人事業（通信機器小売業）</p>
+            <ul class="timeline-bullets">
+              <li>スマートフォン・タブレット等の買取・販売を独力で運営</li>
+              <li>平均月商250万円・累計取引800件以上（好評価率98.3%）</li>
+              <li>仕入〜出荷フローを独自効率化、売れてから出荷完了まで最短15分</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Closing -->
+  <section class="closing">
+    <div class="closing-inner">
+      <p class="closing-eyebrow">Closing</p>
+      <h2>AIを、毎日壊れずに働かせる。</h2>
+      <p>
+        AIエージェントが、過去を思い出し、危険操作を避け、別のAIにレビューされ、複数PCで同じ品質を保ち、
+        長時間の業務を自律的に進められる開発・運用ハーネスを構築しています。その上で営業・音声・商品登録・フリマの実運用を動かしています。
+      </p>
+    </div>
+  </section>
+
+  <script src="../assets/js/scroll.js"></script>
+</body>
+</html>

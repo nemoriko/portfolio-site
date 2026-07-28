@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>商品登録・カタログ一括更新自動化 — AI Agent Portfolio</title>
+  <meta name="description" content="APIもCSVもない業務画面を、壊れにくい手順に分解してAIから一括操作。RPA代替・社内SaaS連携の実例。">
+  <link rel="stylesheet" href="../assets/css/style-vf.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">ai-agent-portfolio</a>
+      <ul class="nav-links"><li><a href="../index.html#projects">← projects</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+      <div><span class="status-badge">稼働中</span></div>
+      <span class="eyebrow">flagship · catalog automation</span>
+      <h1>商品登録・カタログ一括更新自動化</h1>
+      <p class="detail-hero-lead">APIもCSVもない業務画面を、壊れにくい手順に分解してAIから一括操作。</p>
+    </div>
+  </header>
+
+  <main class="detail-body">
+    <div class="container">
+
+      <section class="detail-block reveal">
+        <h2>概要</h2>
+        <p>「人がブラウザで1件ずつ入力するしかない画面を、壊れにくい手順に分解してAIから操作できるようにした」自動化です。RPA代替・社内SaaS連携の実例にあたります。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>課題</h2>
+        <p>APIがない・CSVが使えない・リッチテキストエディタが壊れやすい、という現場固有の制約で、手作業が積み上がります。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>解決 — 手作業82回 vs 一括実行1回</h2>
+        <p>ブラウザ操作を1件ずつではなくCLIバッチへまとめ、HTML注入と保存検証を組み込んで一括処理しました。</p>
+        <figure class="detail-figure">
+          <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="手作業82回と一括実行1回を左右で比較した図">
+            <rect width="860" height="260" fill="#0d1320"/>
+            <line x1="430" y1="24" x2="430" y2="236" stroke="#2a3444" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle">
+              <text x="215" y="42" font-size="14" font-weight="800" fill="#6b7688">MANUAL</text>
+              <text x="645" y="42" font-size="14" font-weight="800" fill="#5ef2c4">BATCH (CLI)</text>
+            </g>
+            <!-- Manual: repeated small rows ×82 -->
+            <g fill="#2a3444">
+              <rect x="90"  y="66" width="110" height="16" rx="4"/>
+              <rect x="90"  y="90" width="110" height="16" rx="4"/>
+              <rect x="90"  y="114" width="110" height="16" rx="4"/>
+              <rect x="90"  y="138" width="110" height="16" rx="4"/>
+              <rect x="230" y="66" width="110" height="16" rx="4"/>
+              <rect x="230" y="90" width="110" height="16" rx="4"/>
+              <rect x="230" y="114" width="110" height="16" rx="4"/>
+              <rect x="230" y="138" width="110" height="16" rx="4"/>
+            </g>
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle">
+              <text x="215" y="185" font-size="13" font-weight="700" fill="#8b97a8">1件ずつ入力を繰り返す</text>
+              <text x="215" y="214" font-size="30" font-weight="900" fill="#6b7688" font-family="'JetBrains Mono',monospace">×82</text>
+            </g>
+            <!-- Batch: single run -->
+            <g font-family="'JetBrains Mono',monospace" text-anchor="middle">
+              <rect x="520" y="86" width="250" height="88" rx="14" fill="#12303a" stroke="#5ef2c4"/>
+              <text x="645" y="120" font-size="14" font-weight="800" fill="#5ef2c4">CLI Batch</text>
+              <text x="645" y="142" font-size="11" font-weight="700" fill="#a7f0d8">HTML注入 + 保存検証</text>
+              <text x="645" y="210" font-size="30" font-weight="900" fill="#5ef2c4">×1</text>
+            </g>
+          </svg>
+          <figcaption class="figure-caption">左：業務画面で1件ずつ82回の入力。右：ロック対象を除く商品HTML・注意事項を、HTML注入と保存検証を組み込んだCLIバッチで一括実行。</figcaption>
+        </figure>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>主な機能・成果</h2>
+        <ul>
+          <li>ロック対象を除く商品HTML・注意事項を一括更新。</li>
+          <li>外部画像URLを直接参照し、画像アップロードの手間を削減。</li>
+          <li>リッチテキストエディタの崩れを避けるHTML注入と保存検証。</li>
+          <li>公式連携ではなく、AIがターミナルから外部サービスを操作できる専用連携として設計。</li>
+        </ul>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>成果数値</h2>
+        <div class="detail-metrics">
+          <div class="detail-metric"><div class="detail-metric-num">82件</div><div class="detail-metric-label">一括更新した商品(実績)</div><div class="detail-metric-asof">2026-06 時点</div></div>
+        </div>
+      </section>
+
+      <section class="detail-block safety reveal">
+        <h2>失敗時にどう安全側へ倒したか</h2>
+        <p>対象サービス名・商品情報は非公開です。価格確定や全商品登録は未完了のため、完了済みの範囲と仕組みだけを示し、できていないことを成果に含めません。保存検証で書き込み結果を確認してから処理を進めます。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>技術スタック</h2>
+        <div class="stack-list">
+          <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">CLI</span>
+        </div>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>画面</h2>
+        <figure class="detail-figure is-placeholder">
+          <span class="placeholder-note">入力画面の匿名化Before/Afterは後日差し替え</span>
+        </figure>
+      </section>
+
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+    </div>
+  </main>
+
+  <script src="../../assets/js/scroll.js"></script>
+</body>
+</html>

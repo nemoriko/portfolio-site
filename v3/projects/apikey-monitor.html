@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>APIキー漏洩候補の継続監視PoC — AI Agent Portfolio</title>
+  <meta name="description" content="公開GitHub上に誤って含まれた可能性のあるAPIキー候補を定期検出し、重複排除・監査用レポート・ジョブ監視へつなぐセキュリティPoC。生のキーは保存せず、人間が確認する前提で設計。">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/detail.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="../index.html">
+        <span class="nav-brand-mark"></span>
+        AI Agent Portfolio
+      </a>
+      <ul class="nav-links"><li><a href="../index.html#projects">← Projects 一覧</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+      <span class="status-badge is-research">研究中</span>
+      <p class="detail-hero-eyebrow">Mid · Security Monitoring PoC</p>
+      <h1>APIキー漏洩候補の継続監視PoC</h1>
+      <p class="detail-hero-lead">公開リポジトリのAPIキー漏洩候補を定期検出する、生キーを保存しないセキュリティPoC。</p>
+    </div>
+  </header>
+
+  <main class="detail-body">
+    <div class="container">
+
+      <section class="detail-block reveal">
+        <h2>概要</h2>
+        <p>検出アルゴリズムだけでなく、機密値を保持しないこと・定期実行を監視すること・人間承認を残すことが強み。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>課題</h2>
+        <p>公開リポジトリに紛れ込んだ秘密情報は、検出しても生キーを保存・通知する運用自体が新たなリスクになる。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>解決 — 安全な検出フロー</h2>
+        <p>検索→候補ハッシュ化→重複排除→人間レビュー、という安全フロー。raw keyを保存せず通知用表示値を分離。</p>
+        <figure class="detail-figure">
+          <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="検索から候補ハッシュ化、重複排除、人間レビューへ至る4段の安全な検出フロー図">
+            <defs>
+              <linearGradient id="ak-node" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1d6bd2"/><stop offset="1" stop-color="#0a47a8"/>
+              </linearGradient>
+              <marker id="ak-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#7fadee"/>
+              </marker>
+            </defs>
+            <rect width="860" height="200" fill="#f6f9fd"/>
+            <g font-family="'Plus Jakarta Sans',sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+              <g><rect x="40"  y="78" width="118" height="46" rx="10" fill="url(#ak-node)"/><text x="99"  y="106">Search</text></g>
+              <g><rect x="240" y="78" width="118" height="46" rx="10" fill="url(#ak-node)"/><text x="299" y="102">Candidate</text><text x="299" y="116" font-size="11">Hash</text></g>
+              <g><rect x="440" y="78" width="118" height="46" rx="10" fill="url(#ak-node)"/><text x="499" y="106">Dedupe</text></g>
+              <g><rect x="640" y="78" width="118" height="46" rx="10" fill="#21b573"/><text x="699" y="102">Human</text><text x="699" y="116" font-size="11">Review</text></g>
+            </g>
+            <g stroke="#7fadee" stroke-width="2.5" fill="none" marker-end="url(#ak-arrow)">
+              <path d="M158 101 L238 101"/><path d="M358 101 L438 101"/><path d="M558 101 L638 101"/>
+            </g>
+          </svg>
+          <figcaption class="figure-caption">検索 → 候補ハッシュ化 → 重複排除 → 人間レビュー。生のキーは保存せず、通知用の表示値だけを分離する。</figcaption>
+        </figure>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>主な機能・成果</h2>
+        <ul>
+          <li>Code Search / Repository Search・SQLite・日次/言語ローテーションのスイープ。</li>
+          <li>プロフィール公開メールとコミット由来メールを分けるなど通知前提の安全設計。</li>
+          <li>定期実行・ダッシュボード掲載・非PII metricsを実装。</li>
+        </ul>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>成果数値</h2>
+        <div class="detail-metrics">
+          <div class="detail-metric"><div class="detail-metric-num">候補180件(ローカルDBで確認・PoC)</div><div class="detail-metric-label">検出候補</div><div class="detail-metric-asof">2026-06 時点</div></div>
+        </div>
+      </section>
+
+      <section class="detail-block safety reveal">
+        <h2>失敗時にどう安全側へ倒したか</h2>
+        <p>誤検知・利用規約・法的評価が未確定。『漏洩を発見して連絡する完成サービス』ではなく監視基盤PoCとして掲載。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>技術スタック</h2>
+        <div class="stack-list">
+          <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">GitHub API</span>
+        </div>
+      </section>
+
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+    </div>
+  </main>
+
+  <script src="../../assets/js/scroll.js"></script>
+</body>
+</html>

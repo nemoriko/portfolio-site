@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Windowsローカル運用・可観測性基盤 — AI Agent Portfolio</title>
+  <meta name="description" content="AIや自動処理を日常運用へ載せるため、Windows固有の電源・タスクスケジューラー・SSH・プロセス・活動統計を管理する周辺基盤。旗艦ハーネスの『裏側』。">
+  <link rel="stylesheet" href="../assets/css/style-vf.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">ai-agent-portfolio</a>
+      <ul class="nav-links"><li><a href="../index.html#projects">← projects</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+      <div><span class="status-badge">稼働中</span></div>
+      <span class="eyebrow">Support · Windows Local Ops</span>
+      <h1>Windowsローカル運用・可観測性基盤</h1>
+      <p class="detail-hero-lead">研究コードを『毎日起動し、止まったら原因が分かる仕組み』に変える周辺基盤。</p>
+    </div>
+  </header>
+
+  <main class="detail-body">
+    <div class="container">
+
+      <section class="detail-block reveal">
+        <h2>概要</h2>
+        <p>Windowsの細かな不具合・二重起動・隠しウィンドウ・スリープ・文字コードなど、現場で止まりやすい箇所を潰す力を裏付ける。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>課題</h2>
+        <p>研究コードは手元では動いても、毎日の無人運用では電源・スケジューラ・文字コード等で静かに止まる。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>解決 — 運用マップ</h2>
+        <p>SSH障害を電源/サービス/名前解決/TCP/ホスト鍵/認証へ分解して診断し、定期処理を横断監視し、活動統計を可視化する。</p>
+        <figure class="detail-figure">
+          <svg viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="中央の運用基盤がジョブ・PC・SSH・ログ・活動グラフの各監視対象をつなぐ運用マップ図">
+            <rect width="860" height="300" fill="#0d1320"/>
+            <g stroke="#5ef2c4" stroke-width="2.5" fill="none">
+              <path d="M430 152 L154 53"/><path d="M430 152 L706 53"/><path d="M430 152 L764 152"/>
+              <path d="M430 152 L706 251"/><path d="M430 152 L147 251"/>
+            </g>
+            <g font-family="'JetBrains Mono',monospace" font-weight="700" fill="#e6edf6" text-anchor="middle">
+              <g><rect x="350" y="120" width="160" height="64" rx="12" fill="#111722" stroke="#5ef2c4"/><text x="430" y="148" font-size="14">Windows</text><text x="430" y="164" font-size="11">Ops</text></g>
+              <g><rect x="90"  y="30"  width="128" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="154" y="59" font-size="13">Jobs</text></g>
+              <g><rect x="642" y="30"  width="128" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="706" y="59" font-size="13">PCs</text></g>
+              <g><rect x="700" y="129" width="128" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="764" y="158" font-size="13">SSH</text></g>
+              <g><rect x="642" y="228" width="128" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="706" y="257" font-size="13">Logs</text></g>
+              <g><rect x="60"  y="228" width="175" height="46" rx="10" fill="#12303a" stroke="#5ef2c4"/><text x="147" y="257" font-size="13" fill="#5ef2c4">Activity Graph</text></g>
+            </g>
+          </svg>
+          <figcaption class="figure-caption">稼働中ジョブ・PC・SSH・ログ・活動グラフ（草グラフ）を中央の運用基盤が束ねる運用マップ。止まった箇所を切り分け、活動統計まで可視化する。</figcaption>
+        </figure>
+        <a class="back-link" href="../../kusa-graph/index.html">稼働グラフ（草）を見る →</a>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>主な機能・成果</h2>
+        <ul>
+          <li>PC移行・Windows設定・スリープ問題の変更履歴をGitで管理。</li>
+          <li>定期処理を横断監視するシステムトレイ構想。</li>
+          <li>全リポジトリのコミット・プロンプト活動を収集し、草グラフと公開安全版を自動生成（kusa-graph）。</li>
+          <li>単発スクリプトを3回以上使ったら専用プロジェクトへ昇格させるインキュベーション運用。</li>
+        </ul>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>成果数値</h2>
+        <div class="detail-metrics">
+          <div class="detail-metric"><div class="detail-metric-num">81日</div><div class="detail-metric-label">コミット連続稼働(本機・2026-07-21)</div><div class="detail-metric-asof">2026-07-21 時点</div></div>
+          <div class="detail-metric"><div class="detail-metric-num">15,531件</div><div class="detail-metric-label">総プロンプト(本機集計)</div><div class="detail-metric-asof">2026-07-21 時点</div></div>
+        </div>
+        <p>※ いずれも本機（1台）での集計値であり、複数PCの合算ではない。</p>
+      </section>
+
+      <section class="detail-block safety reveal">
+        <h2>失敗時にどう安全側へ倒したか</h2>
+        <p>設計中と稼働中が混在。個別カードにせず運用基盤の補足としてまとめる。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>技術スタック</h2>
+        <div class="stack-list">
+          <span class="tag">Python</span><span class="tag">OpenSSH</span><span class="tag">SQLite</span><span class="tag">Jinja2</span><span class="tag">GitHub Pages</span>
+        </div>
+      </section>
+
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+    </div>
+  </main>
+
+  <script src="../../assets/js/scroll.js"></script>
+</body>
+</html>

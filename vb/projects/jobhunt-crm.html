@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>就活CRM・応募運用自動化 — AI Agent Portfolio</title>
+  <meta name="description" content="求人の評価・応募書類・メール通知・面接準備・応募状況を一つの案件管理として扱う個人向け業務システム。媒体ごとに散らばる連絡を案件単位にまとめる。">
+  <link rel="stylesheet" href="../assets/css/style-vf.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">ai-agent-portfolio</a>
+      <ul class="nav-links"><li><a href="../index.html#projects">← projects</a></li></ul>
+    </div>
+  </nav>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+      <div><span class="status-badge">稼働中</span></div>
+      <span class="eyebrow">Mid · Job Hunt CRM</span>
+      <h1>就活CRM・応募運用自動化</h1>
+      <p class="detail-hero-lead">求人評価・応募書類・面接準備・応募状況を一つの案件管理に。</p>
+    </div>
+  </header>
+
+  <main class="detail-body">
+    <div class="container">
+
+      <section class="detail-block reveal">
+        <h2>概要</h2>
+        <p>自分自身が毎日使う業務を対象にしており、課題発見から運用改善までの一貫性を示せる。採用担当者に最も理解されやすい自動化事例の一つ。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>課題</h2>
+        <p>求人・返信・書類・面談・結果待ちが媒体ごとに散らばり、『今日返すもの』が見落とされる。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>解決 — 案件運用フロー</h2>
+        <p>求人評価→応募書類生成→メール処理→面接対策→応募管理を一つの運用に統合し、案件CRMで一画面化。</p>
+        <figure class="detail-figure">
+          <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="求人評価から書類生成、メール処理、面接対策、応募管理へ至る5段の案件運用フロー図">
+            <defs>
+              <marker id="jc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#5ef2c4"/>
+              </marker>
+            </defs>
+            <rect width="860" height="200" fill="#0d1320"/>
+            <g font-family="'JetBrains Mono',monospace" font-size="13" font-weight="700" fill="#e6edf6" text-anchor="middle">
+              <g><rect x="16"  y="78" width="118" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="75"  y="106">Evaluate</text></g>
+              <g><rect x="182" y="78" width="118" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="241" y="106">Documents</text></g>
+              <g><rect x="348" y="78" width="118" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="407" y="106">Email</text></g>
+              <g><rect x="514" y="78" width="118" height="46" rx="10" fill="#111722" stroke="#5ef2c4"/><text x="573" y="102">Interview</text><text x="573" y="116" font-size="11">Prep</text></g>
+              <g><rect x="680" y="78" width="118" height="46" rx="10" fill="#12303a" stroke="#5ef2c4"/><text x="739" y="106" fill="#5ef2c4">Manage</text></g>
+            </g>
+            <g stroke="#5ef2c4" stroke-width="2.5" fill="none" marker-end="url(#jc-arrow)">
+              <path d="M134 101 L180 101"/><path d="M300 101 L346 101"/>
+              <path d="M466 101 L512 101"/><path d="M632 101 L678 101"/>
+            </g>
+          </svg>
+          <figcaption class="figure-caption">求人評価 → 書類生成 → メール処理 → 面接対策 → 応募管理。媒体ごとに散らばる連絡を案件単位の一画面にまとめる。</figcaption>
+        </figure>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>主な機能・成果</h2>
+        <ul>
+          <li>既存応募データを読み取り専用snapshotにして検証。</li>
+          <li>共通ランチャーと独立本体を分け、将来のサービス化を意識。</li>
+          <li>個人情報と応募先固有情報をGit外へ分離。</li>
+        </ul>
+      </section>
+
+      <section class="detail-block safety reveal">
+        <h2>失敗時にどう安全側へ倒したか</h2>
+        <p>応募先名・メール・評価・履歴書データは非公開。架空データで画面を再現する。</p>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>技術スタック</h2>
+        <div class="stack-list">
+          <span class="tag">Python</span><span class="tag">Gmail API</span><span class="tag">SQLite</span>
+        </div>
+      </section>
+
+      <section class="detail-block reveal">
+        <h2>画面</h2>
+        <figure class="detail-figure is-placeholder">
+          <span class="placeholder-note">案件カードと『今日やること』の匿名化画面（後日差し替え）</span>
+        </figure>
+      </section>
+
+      <a class="back-link" href="../index.html#projects">← 一覧に戻る</a>
+    </div>
+  </main>
+
+  <script src="../../assets/js/scroll.js"></script>
+</body>
+</html>
